@@ -42,9 +42,11 @@ class CourseItem extends StatelessWidget {
           children: [
             Text(
               title,
+              
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 20,
+                color: Colors.black
               ),
             ),
             Text(
