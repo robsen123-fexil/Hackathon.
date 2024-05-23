@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors, prefer_final_fields, avoid_print
 
+import 'package:astu/screens/curriculum.dart';
 import 'package:astu/screens/gpa.dart';
 import 'package:astu/screens/home.dart';
 import 'package:astu/screens/mealplan.dart';
@@ -13,6 +14,7 @@ import 'package:astu/screens/cgpa.dart';
 import 'package:astu/screens/clubs.dart';
 import 'package:astu/component/greeting.dart';
 import 'package:astu/screens/searchcourse.dart';
+
 
 class DiscoveryPage extends StatefulWidget {
   static String id = 'discovery';
@@ -248,8 +250,46 @@ class _DiscoveryPageState extends State<DiscoveryPage> {
                     SizedBox(
                       width: 10,
                     ),
+                    
                   ],
                 ),
+                Row( 
+                  children: [ 
+                    Expanded(
+                      child: RoundedButton(
+                        icons: Icon(
+                          Icons.book_outlined,
+                          size: 50,
+                        ),
+                        title: "Curriculum",
+                        ontap: () {
+                          Navigator.pushNamed(context,Curriculum.id );
+                        },
+                      ),
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Expanded(
+                      child: RoundedButton(
+                        icons: Icon(
+                          Icons.book_online,
+                          size: 50,
+                        ),
+                        title: "Currlum",
+                        ontap: () {
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) => Home()));
+                        },
+                      ),
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                  ],
+                )
+                
+                
               ],
             ),
           ],

@@ -1,5 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:astu/course/applied2.dart';
+import 'package:astu/screens/curriculum.dart';
 import 'package:flutter/material.dart';
 import 'package:astu/screens/discover.dart';
 import 'package:astu/screens/home.dart';
@@ -14,6 +16,7 @@ import 'package:astu/screens/gpa.dart';
 import 'package:astu/screens/clubs.dart';
 import 'package:astu/screens/mealplan.dart';
 import 'package:astu/screens/searchcourse.dart';
+import 'package:astu/course/applied.dart';
 
 void main() {
   runApp(const MyApp());
@@ -36,7 +39,10 @@ class MyApp extends StatelessWidget {
       Cumulative.id: (context) => Cumulative(),
       Clubs.id: (context) => Clubs(),
       Mealplan.id: (context) => Mealplan(), 
-      Courses.id:(context)=>Courses()
+      Courses.id:(context)=>Courses(),
+      AppliedmathsII.id:(context)=>AppliedmathsII(),
+      AppliedmathsI.id:(context)=>AppliedmathsI(),
+      Curriculum.id:(context)=>Curriculum()
     });
   }
 }

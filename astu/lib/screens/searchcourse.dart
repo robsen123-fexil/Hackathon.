@@ -1,6 +1,9 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:astu/constants/constant.dart';
+import 'package:astu/course/applied.dart';
+import 'package:astu/course/applied2.dart';
+import 'package:astu/schooldept/applied.dart';
 import 'package:flutter/material.dart';
 import 'package:astu/component/roundedcourse.dart';
 
@@ -14,11 +17,9 @@ class Courses extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         backgroundColor: Colors.white,
-        
-       
         body: SingleChildScrollView(
-          child: Column( 
-            children: [ 
+          child: Column(
+            children: [
               Container(
                 padding: EdgeInsets.all(20),
                 height: 250,
@@ -47,12 +48,28 @@ class Courses extends StatelessWidget {
                       SizedBox(
                         height: 30,
                       ),
-                      Text("Course's",
-                          style: boldtext.copyWith(color: Colors.white)),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Container(
+                              child: IconButton(
+                                  onPressed: () {
+                                    Navigator.pop(context);
+                                  },
+                                  icon: Icon(
+                                    Icons.arrow_back,
+                                    color: Colors.white,
+                                  ))),
+                          SizedBox(
+                            width: 30,
+                          ),
+                          Text("Course's",
+                              style: boldtext.copyWith(color: Colors.white))
+                        ],
+                      ),
                       SizedBox(
                         height: 60,
                       ),
-                     
                       TextField(
                         controller: searchController,
                         decoration: InputDecoration(
@@ -69,24 +86,22 @@ class Courses extends StatelessWidget {
                       ),
                     ]),
               ),
-              
-                SizedBox( 
-                  height: 10,
-                ),
-               
-                 SizedBox(
+              SizedBox(
+                height: 10,
+              ),
+              SizedBox(
                 height: 10,
               ),
               CourseItem(
-                onTap: (){
-              
+                onTap: () {
+                  Navigator.pushNamed(context, AppliedmathsI.id);
                 },
                 title: "Applied Mathematics I",
                 department: "Math1101",
               ),
               CourseItem(
-                onTap: (){
-                  
+                onTap: () {
+                  Navigator.pushNamed(context, AppliedmathsII.id);
                 },
                 title: "Applied Mathematic II",
                 department: "Math1102",
@@ -161,8 +176,6 @@ class Courses extends StatelessWidget {
                 title: "General Phsycology a",
                 department: "LART2002",
               ),
-            
-                    
             ],
           ),
         ),

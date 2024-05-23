@@ -5,6 +5,7 @@ import 'package:astu/constants/constant.dart';
 
 class Civil extends StatelessWidget {
   static String id = 'civil';
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -17,15 +18,17 @@ class Civil extends StatelessWidget {
               height: 250,
               width: double.infinity,
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.only(
-                      bottomLeft: Radius.circular(20),
-                      bottomRight: Radius.circular(20)),
-                  image: DecorationImage(
-                    image: AssetImage(
-                      "images/civil.jpeg",
-                    ),
-                    fit: BoxFit.cover,
-                  )),
+                borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(20),
+                  bottomRight: Radius.circular(20),
+                ),
+                image: DecorationImage(
+                  image: AssetImage(
+                    "images/civil.jpeg",
+                  ),
+                  fit: BoxFit.cover,
+                ),
+              ),
             ),
             Column(
               children: [
@@ -46,36 +49,14 @@ class Civil extends StatelessWidget {
                     style: TextStyle(fontSize: 17),
                   ),
                 ),
-                Row(children: [
-                  Padding(
-                    padding: EdgeInsets.all(20),
-                    child: Text(
-                      "Department",
-                      style: boldtext,
-                    ),
-                  ),
-                ]),
                 Row(
                   children: [
                     Padding(
-                      padding: EdgeInsets.all(10),
-                      child: ElevatedButton(
-                          onPressed: () {},
-                          child: Text(
-                            "Civil Engineering",
-                            style: TextStyle(color: Colors.black),
-                          )),
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Expanded(
-                      child: ElevatedButton(
-                          onPressed: () {},
-                          child: Text(
-                            "Architectural Eng'",
-                            style: TextStyle(color: Colors.black),
-                          )),
+                      padding: EdgeInsets.all(20),
+                      child: Text(
+                        "Department",
+                        style: boldtext,
+                      ),
                     ),
                   ],
                 ),
@@ -83,13 +64,43 @@ class Civil extends StatelessWidget {
                   children: [
                     Padding(
                       padding: EdgeInsets.all(10),
-                      child: Expanded(
+                      child: ElevatedButton(
+                        onPressed: () {},
+                        child: Text(
+                          "Civil Engineering",
+                          style: TextStyle(color: Colors.black),
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Expanded(
+                      child: Padding(
+                        padding: EdgeInsets.all(10),
                         child: ElevatedButton(
-                            onPressed: () {},
-                            child: Text(
-                              "Water Engineering",
-                              style: TextStyle(color: Colors.black),
-                            )),
+                          onPressed: () {},
+                          child: Text(
+                            "Architectural Eng'",
+                            style: TextStyle(color: Colors.black),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                Row(
+                  children: [
+                    Expanded(
+                      child: Padding(
+                        padding: EdgeInsets.all(10),
+                        child: ElevatedButton(
+                          onPressed: () {},
+                          child: Text(
+                            "Water Engineering",
+                            style: TextStyle(color: Colors.black),
+                          ),
+                        ),
                       ),
                     ),
                     SizedBox(
