@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:astu/course/applied2.dart';
+import 'package:astu/curriculum/about.dart';
 import 'package:astu/screens/curriculum.dart';
 import 'package:flutter/material.dart';
 import 'package:astu/screens/discover.dart';
@@ -42,7 +43,9 @@ class MyApp extends StatelessWidget {
       Courses.id:(context)=>Courses(),
       AppliedmathsII.id:(context)=>AppliedmathsII(),
       AppliedmathsI.id:(context)=>AppliedmathsI(),
-      Curriculum.id:(context)=>Curriculum()
+      Curriculum.id:(context)=>Curriculum(),
+      
+      About.id:(context)=>About(),
     });
   }
 }

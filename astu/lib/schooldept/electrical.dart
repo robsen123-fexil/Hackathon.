@@ -1,5 +1,7 @@
 // ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors
 
+import 'package:astu/curriculum/about.dart';
+
 import 'package:flutter/material.dart';
 import 'package:astu/constants/constant.dart';
 
@@ -61,7 +63,9 @@ class Electrical extends StatelessWidget {
                     child: Row(
                       children: [
                         ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.pushNamed(context, About.id);
+                          },
                           child: Text(
                             "SoftWare Engineering",
                             style: TextStyle(color: Colors.black),
