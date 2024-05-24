@@ -15,6 +15,7 @@ import 'package:astu/screens/cgpa.dart';
 import 'package:astu/screens/clubs.dart';
 import 'package:astu/component/greeting.dart';
 import 'package:astu/screens/searchcourse.dart';
+import 'package:astu/screens/sidebar.dart';
 
 class DiscoveryPage extends StatefulWidget {
   static String id = 'discovery';
@@ -53,7 +54,9 @@ class _DiscoveryPageState extends State<DiscoveryPage> {
   Widget build(BuildContext context) {
     print(getgreeting());
     return Scaffold(
-      backgroundColor: Colors.white,
+      drawer: Sidebar(),
+      backgroundColor: 
+              Colors.teal[50], 
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -85,6 +88,14 @@ class _DiscoveryPageState extends State<DiscoveryPage> {
               child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                    Builder(
+                      builder: (context)=>
+                       IconButton(
+                          onPressed: () {
+                            Scaffold.of(context).openDrawer();
+                          },
+                          icon: Icon(Icons.menu) ,iconSize: 30,color: Colors.white,),
+                    ),
                     SizedBox(
                       height: 20,
                     ),
@@ -97,19 +108,7 @@ class _DiscoveryPageState extends State<DiscoveryPage> {
                       getgreeting(),
                       style: boldtext.copyWith(color: Colors.white),
                     ),
-                    TextField(
-                      controller: searchController,
-                      decoration: InputDecoration(
-                          labelText: "Course's",
-                          hintStyle: TextStyle(
-                              color: const Color.fromARGB(255, 148, 148, 148)),
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(8.0),
-                          ),
-                          prefixIcon: Icon(Icons.search),
-                          filled: true,
-                          fillColor: Colors.white),
-                    ),
+                    
                   ]),
             ),
             Padding(
@@ -123,12 +122,7 @@ class _DiscoveryPageState extends State<DiscoveryPage> {
                           fontSize: 20,
                           color: Color.fromARGB(255, 37, 73, 105)),
                     ),
-                    Text(
-                      "View All >",
-                      style: TextStyle(
-                          fontSize: 20,
-                          color: Color.fromARGB(255, 50, 115, 171)),
-                    ),
+                    
                   ]),
             ),
             Column(
@@ -141,7 +135,7 @@ class _DiscoveryPageState extends State<DiscoveryPage> {
                           Icons.school_rounded,
                           size: 50,
                         ),
-                        title: "Discover School",
+                        title: "Curriculum",
                         ontap: () {
                           Navigator.pushNamed(context, SchoolList.id);
                         },
@@ -159,6 +153,21 @@ class _DiscoveryPageState extends State<DiscoveryPage> {
                         title: "Discover Food",
                         ontap: () {
                           Navigator.pushNamed(context, MealSchedule.id);
+                        },
+                      ),
+                    ),
+                    Expanded(
+                      child: RoundedButton(
+                        icons: Icon(
+                          Icons.calculate_outlined,
+                          size: 50,
+                        ),
+                        title: "Grade Calculator",
+                        ontap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => GradeInputForm()));
                         },
                       ),
                     ),
@@ -202,6 +211,18 @@ class _DiscoveryPageState extends State<DiscoveryPage> {
                         },
                       ),
                     ),
+                    Expanded(
+                      child: RoundedButton(
+                        icons: Icon(
+                          Icons.phone,
+                          size: 50,
+                        ),
+                        title: "Phone Number",
+                        ontap: () {
+                          Navigator.pushNamed(context, DiscoveryPage.id);
+                        },
+                      ),
+                    ),
                     SizedBox(
                       width: 10,
                     ),
@@ -210,79 +231,8 @@ class _DiscoveryPageState extends State<DiscoveryPage> {
                 SizedBox(
                   height: 10,
                 ),
-                Row(
-                  children: [
-                    Expanded(
-                      child: RoundedButton(
-                        icons: Icon(
-                          Icons.calculate_outlined,
-                          size: 50,
-                        ),
-                        title: "Grade Calculator",
-                        ontap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => GradeInputForm()));
-                        },
-                      ),
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Expanded(
-                      child: RoundedButton(
-                        icons: Icon(
-                          Icons.computer,
-                          size: 50,
-                        ),
-                        title: "Departments",
-                        ontap: () {
-                          Navigator.push(context,
-                              MaterialPageRoute(builder: (context) => Home()));
-                        },
-                      ),
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                  ],
-                ),
-                Row(
-                  children: [
-                    Expanded(
-                      child: RoundedButton(
-                        icons: Icon(
-                          Icons.book_outlined,
-                          size: 50,
-                        ),
-                        title: "Curriculum",
-                        ontap: () {
-                          Navigator.pushNamed(context, Curriculum.id);
-                        },
-                      ),
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Expanded(
-                      child: RoundedButton(
-                        icons: Icon(
-                          Icons.book_online,
-                          size: 50,
-                        ),
-                        title: "Currlum",
-                        ontap: () {
-                          Navigator.push(context,
-                              MaterialPageRoute(builder: (context) => Home()));
-                        },
-                      ),
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                  ],
-                )
+                
+               
               ],
             ),
           ],

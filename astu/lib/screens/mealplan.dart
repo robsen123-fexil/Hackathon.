@@ -22,7 +22,7 @@ class MealSchedule extends StatelessWidget {
             },
             icon: Icon(Icons.arrow_back),
           ),
-          backgroundColor: Color.fromARGB(255, 119, 8, 255), // Changed the app bar color
+          backgroundColor: Color.fromARGB(255, 255, 255, 255), // Changed the app bar color
         ),
         body: Column(
           children: [
