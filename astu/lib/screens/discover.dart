@@ -3,6 +3,7 @@
 import 'package:astu/screens/curriculum.dart';
 import 'package:astu/screens/gpa.dart';
 import 'package:astu/screens/home.dart';
+import 'package:astu/screens/mapscreen.dart';
 import 'package:astu/screens/mealplan.dart';
 import 'package:astu/screens/schoollist.dart';
 import 'package:flutter/material.dart';
@@ -14,7 +15,6 @@ import 'package:astu/screens/cgpa.dart';
 import 'package:astu/screens/clubs.dart';
 import 'package:astu/component/greeting.dart';
 import 'package:astu/screens/searchcourse.dart';
-
 
 class DiscoveryPage extends StatefulWidget {
   static String id = 'discovery';
@@ -158,10 +158,7 @@ class _DiscoveryPageState extends State<DiscoveryPage> {
                         ),
                         title: "Discover Food",
                         ontap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => Mealplan()));
+                          Navigator.pushNamed(context, MealSchedule.id);
                         },
                       ),
                     ),
@@ -201,8 +198,7 @@ class _DiscoveryPageState extends State<DiscoveryPage> {
                         ),
                         title: "Discover NearBy",
                         ontap: () {
-                          Navigator.push(context,
-                              MaterialPageRoute(builder: (context) => Home()));
+                          Navigator.pushNamed(context, DiscoveryPage.id);
                         },
                       ),
                     ),
@@ -250,11 +246,10 @@ class _DiscoveryPageState extends State<DiscoveryPage> {
                     SizedBox(
                       width: 10,
                     ),
-                    
                   ],
                 ),
-                Row( 
-                  children: [ 
+                Row(
+                  children: [
                     Expanded(
                       child: RoundedButton(
                         icons: Icon(
@@ -263,7 +258,7 @@ class _DiscoveryPageState extends State<DiscoveryPage> {
                         ),
                         title: "Curriculum",
                         ontap: () {
-                          Navigator.pushNamed(context,Curriculum.id );
+                          Navigator.pushNamed(context, Curriculum.id);
                         },
                       ),
                     ),
@@ -288,8 +283,6 @@ class _DiscoveryPageState extends State<DiscoveryPage> {
                     ),
                   ],
                 )
-                
-                
               ],
             ),
           ],

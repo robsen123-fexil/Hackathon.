@@ -3,6 +3,7 @@
 import 'package:astu/course/applied2.dart';
 import 'package:astu/curriculum/about.dart';
 import 'package:astu/screens/curriculum.dart';
+import 'package:astu/screens/mapscreen.dart';
 import 'package:flutter/material.dart';
 import 'package:astu/screens/discover.dart';
 import 'package:astu/screens/home.dart';
@@ -39,12 +40,12 @@ class MyApp extends StatelessWidget {
       GradeInputForm.id: (context) => GradeInputForm(),
       Cumulative.id: (context) => Cumulative(),
       Clubs.id: (context) => Clubs(),
-      Mealplan.id: (context) => Mealplan(), 
+      MealSchedule.id: (context) => MealSchedule(), 
       Courses.id:(context)=>Courses(),
       AppliedmathsII.id:(context)=>AppliedmathsII(),
       AppliedmathsI.id:(context)=>AppliedmathsI(),
       Curriculum.id:(context)=>Curriculum(),
-      
+      MapScreen.id:(context)=>MapScreen(),
       About.id:(context)=>About(),
     });
   }

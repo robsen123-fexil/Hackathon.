@@ -14,13 +14,7 @@ class RoundedPage extends StatelessWidget {
       child: Column(
           
           children: [
-          Container( 
-            height: 300,
-            width: 300,
-         decoration: BoxDecoration( 
-          image: DecorationImage(image: AssetImage("images/csec.jpeg" , ) , fit: BoxFit.cover)
-         ),
-          ),
+         
          Padding(
           padding: EdgeInsets.all(20),
           child: ClipRRect(
@@ -29,13 +23,16 @@ class RoundedPage extends StatelessWidget {
               height: 400,
               color: color.withOpacity(0.5),
               child: Center(
-                child: Text(
+                child: Padding (
+                  padding: EdgeInsets.all(20),
+                  child: Text(
                   text,
                   style: TextStyle(
                     color: Color.fromARGB(255, 0, 0, 0),
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                   ),
+                                      ),
                 ),
               ),
             ),
