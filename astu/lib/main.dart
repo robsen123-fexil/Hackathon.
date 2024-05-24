@@ -2,8 +2,10 @@
 
 import 'package:astu/course/applied2.dart';
 import 'package:astu/curriculum/about.dart';
-import 'package:astu/screens/curriculum.dart';
+import 'package:astu/screens/feature.dart';
+import 'package:astu/screens/landings.dart';
 import 'package:astu/screens/mapscreen.dart';
+import 'package:astu/screens/phone.dart';
 import 'package:flutter/material.dart';
 import 'package:astu/screens/discover.dart';
 import 'package:astu/screens/home.dart';
@@ -29,7 +31,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(initialRoute: DiscoveryPage.id, routes: {
+    return MaterialApp(initialRoute: LandingPage.id, routes: {
       DiscoveryPage.id: (context) => DiscoveryPage(),
       Electrical.id: (context) => Electrical(),
       Civil.id: (context) => Civil(),
@@ -44,9 +46,10 @@ class MyApp extends StatelessWidget {
       Courses.id:(context)=>Courses(),
       AppliedmathsII.id:(context)=>AppliedmathsII(),
       AppliedmathsI.id:(context)=>AppliedmathsI(),
-      Curriculum.id:(context)=>Curriculum(),
+      LandingPage.id:(context)=> LandingPage(),
       MapScreen.id:(context)=>MapScreen(),
       About.id:(context)=>About(),
+      Phone.id:(context)=>Phone()
     });
   }
 }

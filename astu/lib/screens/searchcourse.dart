@@ -43,7 +43,7 @@ class Courses extends StatelessWidget {
                   ),
                 ),
                 child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       SizedBox(
                         height: 30,

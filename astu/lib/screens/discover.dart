@@ -1,10 +1,11 @@
 // ignore_for_file: prefer_const_constructors, prefer_final_fields, avoid_print
 
-import 'package:astu/screens/curriculum.dart';
+
 import 'package:astu/screens/gpa.dart';
 import 'package:astu/screens/home.dart';
 import 'package:astu/screens/mapscreen.dart';
 import 'package:astu/screens/mealplan.dart';
+import 'package:astu/screens/phone.dart';
 import 'package:astu/screens/schoollist.dart';
 import 'package:flutter/material.dart';
 import 'package:astu/constants/constant.dart';
@@ -219,7 +220,7 @@ class _DiscoveryPageState extends State<DiscoveryPage> {
                         ),
                         title: "Phone Number",
                         ontap: () {
-                          Navigator.pushNamed(context, DiscoveryPage.id);
+                          Navigator.pushNamed(context, Phone.id);
                         },
                       ),
                     ),
