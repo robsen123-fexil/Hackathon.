@@ -10,6 +10,11 @@ import 'package:astu/clubs/eicclub.dart';
 import 'package:astu/clubs/minimedia.dart';
 import 'package:astu/clubs/spacescience.dart';
 import 'package:astu/course/applied2.dart';
+import 'package:astu/course/applied3.dart';
+import 'package:astu/course/chemistry.dart';
+import 'package:astu/course/computing.dart';
+import 'package:astu/course/logic.dart';
+import 'package:astu/course/physics.dart';
 import 'package:astu/curriculum/applied/biology.dart';
 import 'package:astu/curriculum/applied/geology.dart';
 import 'package:astu/curriculum/applied/pharmacy.dart';
@@ -151,7 +156,13 @@ class MyApp extends StatelessWidget {
         Amphy.id: (context) => Amphy(),
         Females.id: (context) => Females(),
         Cafe.id: (context) => Cafe(),
-        DeanOffice.id: (context) => DeanOffice()
+        DeanOffice.id: (context) => DeanOffice(),
+        Physics.id:(context)=>Physics(),
+        Chemistry.id:(context)=>Chemistry(),
+        Computing.id:(context)=>Computing(),
+        Logic.id:(context)=>Logic(),
+        AppliedmathsIII.id:(context)=>AppliedmathsIII()
+        
       },
     );
   }

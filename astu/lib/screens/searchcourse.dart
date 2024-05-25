@@ -3,6 +3,11 @@
 import 'package:astu/constants/constant.dart';
 import 'package:astu/course/applied.dart';
 import 'package:astu/course/applied2.dart';
+import 'package:astu/course/applied3.dart';
+import 'package:astu/course/chemistry.dart';
+import 'package:astu/course/computing.dart';
+import 'package:astu/course/logic.dart';
+import 'package:astu/course/physics.dart';
 import 'package:astu/schooldept/applied.dart';
 import 'package:flutter/material.dart';
 import 'package:astu/component/roundedcourse.dart';
@@ -63,27 +68,15 @@ class Courses extends StatelessWidget {
                           SizedBox(
                             width: 30,
                           ),
-                          Text("Course's",
-                              style: boldtext.copyWith(color: Colors.white))
+                         
                         ],
                       ),
                       SizedBox(
                         height: 60,
                       ),
-                      TextField(
-                        controller: searchController,
-                        decoration: InputDecoration(
-                            labelText: "Course's",
-                            hintStyle: TextStyle(
-                                color:
-                                    const Color.fromARGB(255, 148, 148, 148)),
-                            border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(8.0),
-                            ),
-                            prefixIcon: Icon(Icons.search),
-                            filled: true,
-                            fillColor: Colors.white),
-                      ),
+                       Text("Course's",
+                          style: boldtext.copyWith(color: Colors.white))
+                      
                     ]),
               ),
               SizedBox(
@@ -107,32 +100,44 @@ class Courses extends StatelessWidget {
                 department: "Math1102",
               ),
               CourseItem(
-                onTap: () {},
+                 onTap: () {
+                  Navigator.pushNamed(context, AppliedmathsIII.id);
+                },
                 title: "Applied Mathematic III",
                 department: "Math1103",
               ),
               CourseItem(
-                onTap: () {},
+                onTap: () {
+                  Navigator.pushNamed(context, Physics.id);
+                },
                 title: "General Physcis",
                 department: "Phys1101",
               ),
               CourseItem(
-                onTap: () {},
-                title: "General Cheme",
+                onTap: () {
+                  Navigator.pushNamed(context, Chemistry.id);
+                },
+                title: "General Chemistry",
                 department: "Phys1101",
               ),
               CourseItem(
-                onTap: () {},
+                 onTap: () {
+                  Navigator.pushNamed(context, Computing.id);
+                },
                 title: "Introduction To Computing",
                 department: "CSEg1101",
               ),
               CourseItem(
-                onTap: () {},
+                onTap: () {
+                  Navigator.pushNamed(context,Logic.id);
+                },
                 title: "Login & Critical Thinking",
                 department: "LART11012",
               ),
               CourseItem(
-                onTap: () {},
+                 onTap: () {
+                  Navigator.pushNamed(context, Computing.id);
+                },
                 title: "Introduction To Computing",
                 department: "CSEg1101",
               ),

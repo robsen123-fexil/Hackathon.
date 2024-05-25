@@ -141,24 +141,27 @@ class _DiscoveryPageState extends State<DiscoveryPage> with SingleTickerProvider
                         height: 20,
                       ),
                      
-                      AnimatedTextKit(
-                    animatedTexts: [
-                      TypewriterAnimatedText(
-                        "Welcome ",
-                        textStyle: TextStyle(
-                          fontSize: 35.0,
-                          color: const Color.fromARGB(255, 255, 255, 255),
-                          fontWeight: FontWeight.w900,
-                        ),
-                        speed: Duration(milliseconds: 100),
-                      )
-                    ],
-                    totalRepeatCount: 1,
-                  ),
-                   Text(" $_name",
-                          style: boldtext.copyWith(color: Colors.white)),
+                      Row(
+                        children:[ AnimatedTextKit(
+                                            animatedTexts: [
+                        TypewriterAnimatedText(
+                          "Welcome ",
+                          textStyle: TextStyle(
+                            fontSize: 35.0,
+                            color: const Color.fromARGB(255, 255, 255, 255),
+                            fontWeight: FontWeight.w900,
+                          ),
+                          speed: Duration(milliseconds: 100),
+                        )
+                                            ],
+                                            totalRepeatCount: 1,
+                                          ),
+                                          Text(" $_name",
+                            style: boldtext.copyWith(color: Colors.white)),
+                    ]),
+                   
                       SizedBox(
-                        height: 10,
+                        height: 50,
                       ),
                       Text(
                         getgreeting(),
@@ -169,7 +172,7 @@ class _DiscoveryPageState extends State<DiscoveryPage> with SingleTickerProvider
               ),
             ),
             Padding(
-              padding: EdgeInsets.all(40),
+              padding: EdgeInsets.all(20),
               child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -325,11 +328,11 @@ class _DiscoveryPageState extends State<DiscoveryPage> with SingleTickerProvider
                       child: RoundedButton(
                         icons: Center(
                           child: Icon(
-                            Icons.calculate_outlined,
+                            Icons.people_outlined,
                             size: 50,
                           ),
                         ),
-                        title: "Grade Calculator",
+                        title: "Clubs",
                         ontap: () {
                          Navigator.pushNamed(context, Place.id);
                         },
@@ -342,16 +345,14 @@ class _DiscoveryPageState extends State<DiscoveryPage> with SingleTickerProvider
                       child: RoundedButton(
                         icons: Center(
                           child: Icon(
-                            Icons.calculate_outlined,
+                            Icons.book,
                             size: 50,
                           ),
                         ),
-                        title: "Grade Calculator",
+                        title: "Course",
                         ontap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => GradeInputForm()));
+                          Navigator.pushNamed(
+                              context, Courses.id);
                         },
                       ),
                     ),
