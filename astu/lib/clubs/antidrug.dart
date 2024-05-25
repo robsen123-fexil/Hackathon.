@@ -8,10 +8,9 @@ class AntiDrug extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return RoundedClub(
-        description: "thid is an anti frug club",
+        description: "Our mission is to educate, support, and empower students to make healthy choices and resist peer pressure related to drug use. Through informative workshops, engaging activities, guest speakers, and outreach programs, the Anti-Drug Club aims to foster a safe and supportive environment for all students.",
         image: 'images/antidrug.jpeg',
-        phot02: 'images/antidrug.jpeg',
-        photo1: 'images/antidrug.jpeg',
+        
         name: " Anti_Drug Club");
   }
 }

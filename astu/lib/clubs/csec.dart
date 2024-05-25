@@ -11,8 +11,7 @@ class Csec extends StatelessWidget {
         description:
             "Introducing CSEC (Computer Science and Engineering Club), your gateway to the world of technology, development, competition, and problem-solving. CSEC is dedicated to fostering a vibrant community of tech enthusiasts who are passionate about advancing their skills in software development, participating in competitive programming, and tackling real-world problems with innovative solutions.",
         image: 'images/csec.jpeg',
-        phot02: 'images/csec.jpeg',
-        photo1: 'images/csec.jpeg',
+       
         name: 'CSEC ASTU');
   }
 }

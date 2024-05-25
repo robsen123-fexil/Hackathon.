@@ -5,16 +5,14 @@ import 'package:flutter/material.dart';
 class RoundedClub extends StatelessWidget {
   String image;
   String description;
-  String photo1;
-  String phot02;
+  
   String name;
 
   RoundedClub(
       {super.key,
       required this.description,
       required this.image,
-      required this.phot02,
-      required this.photo1,
+    
       required this.name
       
       });
@@ -90,17 +88,17 @@ class RoundedClub extends StatelessWidget {
             SizedBox(
               height: 20,
             ),
+            SizedBox(
+              height: 20,
+            ),
             Row(
               children: [
+
                 Expanded(
                   child: Container(
                     height: 200,
                     width: 200,
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                          image: AssetImage(photo1)),
-                      // Half of the height/width
-                    ),
+                   
                   ),
                 ),
                 SizedBox(
@@ -110,11 +108,7 @@ class RoundedClub extends StatelessWidget {
                   child: Container(
                     height: 200,
                     width: 200,
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                          image: AssetImage(phot02)),
-                      // Half of the height/width
-                    ),
+                    
                   ),
                 ),
               ],

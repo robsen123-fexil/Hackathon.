@@ -5,8 +5,8 @@ import 'dart:ffi';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
-class Clinics extends StatelessWidget {
-  static String id = 'clinic';
+class Amphy extends StatelessWidget {
+  static String id = 'Amphy';
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +32,7 @@ class Clinics extends StatelessWidget {
             Padding(
               padding: EdgeInsets.all(10),
               child: Text(
-                "Clinic",
+                "Amphy",
                 style: TextStyle(
                   fontSize: 20,
                 ),

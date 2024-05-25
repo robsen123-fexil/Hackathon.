@@ -2,8 +2,12 @@
 
 import 'package:astu/clubs/Roundedclub.dart';
 import 'package:astu/clubs/a2sv.dart';
+import 'package:astu/clubs/alx_community.dart';
+import 'package:astu/clubs/amc.dart';
 import 'package:astu/clubs/antidrug.dart';
 import 'package:astu/clubs/csec.dart';
+import 'package:astu/clubs/eicclub.dart';
+import 'package:astu/clubs/minimedia.dart';
 import 'package:astu/clubs/spacescience.dart';
 import 'package:astu/course/applied2.dart';
 import 'package:astu/curriculum/applied/biology.dart';
@@ -19,7 +23,12 @@ import 'package:astu/curriculum/mechanical/materail.dart';
 import 'package:astu/curriculum/mechanical/mechanical.dart';
 import 'package:astu/curriculum/power.dart';
 import 'package:astu/curriculum/software.dart';
-import 'package:astu/maps/libraries.dart';
+import 'package:astu/maps/amphy.dart';
+import 'package:astu/maps/females.dart';
+import 'package:astu/maps/libraris.dart';
+import 'package:astu/maps/clinics.dart';
+import 'package:astu/maps/dean.dart';
+import 'package:astu/maps/cafe.dart';
 import 'package:astu/screens/feature.dart';
 import 'package:astu/screens/landings.dart';
 import 'package:astu/screens/mapscreen.dart';
@@ -92,7 +101,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter SQLite Demo',
       initialRoute: isDatabaseEmpty ? InsertScreen.id : LandingPage.id,
       routes: {
         InsertScreen.id: (context) => InsertScreen(),
@@ -122,20 +130,28 @@ class MyApp extends StatelessWidget {
         AntiDrug.id: (context) => AntiDrug(),
         Space.id: (context) => Space(),
         Place.id: (context) => Place(),
-        SampleMap.id: (context) => SampleMap(),
         Schedule.id: (context) => Schedule(),
         Rulespage.id: (context) => Rulespage(),
         Mechanicalabout.id: (context) => Mechanicalabout(),
-        Materialabout.id:(context)=>Materialabout(),
-        Chemicalabout.id:(context)=>Chemicalabout(),
-        Civil.id:(context)=>Civil(),
-        Archabout.id:(context)=>Archabout(),
-        Biologyabout.id:(context)=>Biologyabout(),
-        Pharmacy.id:(context)=>Pharmacy(),
-        Geologyabout.id:(context)=>Geologyabout(),
-        Waterabout.id:(context)=>Waterabout(),
-        Civilabout.id:(context)=>Civilabout()
-        
+        Materialabout.id: (context) => Materialabout(),
+        Chemicalabout.id: (context) => Chemicalabout(),
+        Civil.id: (context) => Civil(),
+        Archabout.id: (context) => Archabout(),
+        Biologyabout.id: (context) => Biologyabout(),
+        Pharmacy.id: (context) => Pharmacy(),
+        Geologyabout.id: (context) => Geologyabout(),
+        Waterabout.id: (context) => Waterabout(),
+        Civilabout.id: (context) => Civilabout(),
+        A2sv.id: (context) => A2sv(),
+        Alx.id: (context) => Alx(),
+        Eic.id: (context) => Eic(),
+        Amc.id: (context) => Amc(),
+        Mini.id: (context) => Mini(),
+        Libraries.id: (context) => Libraries(),
+        Amphy.id: (context) => Amphy(),
+        Females.id: (context) => Females(),
+        Cafe.id: (context) => Cafe(),
+        DeanOffice.id: (context) => DeanOffice()
       },
     );
   }

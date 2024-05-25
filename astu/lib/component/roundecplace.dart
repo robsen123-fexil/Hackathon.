@@ -25,7 +25,7 @@ class RoundedPlace extends StatelessWidget {
         style: TextButton.styleFrom(padding: EdgeInsets.zero),
         child: Row(
           children: [
-            Icon(Icons.location_pin),
+            Icon(Icons.location_pin , color: Colors.black,),
             SizedBox(width: 10),
             Text(
               name,

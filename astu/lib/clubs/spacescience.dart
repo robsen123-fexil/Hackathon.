@@ -8,10 +8,9 @@ class Space extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return RoundedClub(
-        description: "this is a club for space scienc",
+        description: "Our club serves as a launchpad for students interested in all aspects of space science, including astronomy, astrophysics, planetary science, and space exploration. Whether you're fascinated by the wonders of the night sky, eager to delve into the latest research on distant planets, or dream of contributing to humanity's journey to the stars, the Space Science Club provides a welcoming and stimulating environment to pursue your interests.",
         image: 'images/Space.jpeg',
-        phot02: 'images/Space.jpeg',
-        photo1: 'images/Space.jpeg',
+       
         name: "Space Science Club");
   }
 }

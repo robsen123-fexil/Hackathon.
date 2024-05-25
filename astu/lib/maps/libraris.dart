@@ -5,8 +5,8 @@ import 'dart:ffi';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
-class Clinics extends StatelessWidget {
-  static String id = 'clinic';
+class Libraries extends StatelessWidget {
+  static String id = 'Libraries';
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +32,7 @@ class Clinics extends StatelessWidget {
             Padding(
               padding: EdgeInsets.all(10),
               child: Text(
-                "Clinic",
+                "Cafe",
                 style: TextStyle(
                   fontSize: 20,
                 ),
@@ -47,8 +47,8 @@ class Clinics extends StatelessWidget {
                   height: 200,
                   width: 300,
                   decoration: BoxDecoration(
-                    image:
-                        DecorationImage(image: AssetImage('images/amphy.jpg')),
+                    image: DecorationImage(
+                        image: AssetImage('images/central.jpg')),
                     // Half of the height/width
                   ),
                 ),
@@ -88,7 +88,7 @@ class MapSample extends StatefulWidget {
 class _MapSampleState extends State<MapSample> {
   late GoogleMapController mapController;
 
-  final LatLng _center = const LatLng(8.564522983218845, 39.2917457113612440);
+  final LatLng _center = const LatLng(8.56109, 39.29040);
 
   @override
   void dispose() {

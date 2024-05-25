@@ -8,10 +8,9 @@ class A2sv extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return RoundedClub(
-        description: " A2sv id club",
-        image: 'images/csec.jpeg',
-        phot02: 'images/csec.jpeg',
-        photo1: 'images/csec.jpeg',
-        name: "African To Silcon Valley");
+        description: " This club serves as a platform for ambitious and driven individuals who seek to immerse themselves in the vibrant ecosystem of Silicon Valley, where groundbreaking startups, established tech giants, and visionary entrepreneurs converge.Through networking events, workshops, guest speakers, and mentorship programs, A2SV provides its members with valuable insights, resources, and connections to navigate the Silicon Valley landscape effectively.",
+        image: 'images/a2sv.jpg',
+      
+        name: "A2SV",);
   }
 }
