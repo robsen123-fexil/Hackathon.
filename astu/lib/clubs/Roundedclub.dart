@@ -12,9 +12,7 @@ class RoundedClub extends StatelessWidget {
       {super.key,
       required this.description,
       required this.image,
-    
       required this.name
-      
       });
 
   @override
