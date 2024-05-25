@@ -105,7 +105,7 @@ class _DiscoveryPageState extends State<DiscoveryPage> with SingleTickerProvider
             ),
             Container(
               padding: EdgeInsets.all(20),
-              height: 250,
+              height: 350,
               width: double.infinity,
               decoration: BoxDecoration(
                 boxShadow: [
@@ -158,7 +158,7 @@ class _DiscoveryPageState extends State<DiscoveryPage> with SingleTickerProvider
                    Text(" $_name",
                           style: boldtext.copyWith(color: Colors.white)),
                       SizedBox(
-                        height: 20,
+                        height: 10,
                       ),
                       Text(
                         getgreeting(),

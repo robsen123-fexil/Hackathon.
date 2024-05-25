@@ -6,16 +6,16 @@ import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:astu/curriculum/page.dart'; // Import the RoundedPage widget
 
-class Chemicalabout extends StatelessWidget {
+class Biologyabout extends StatelessWidget {
   final PageController _controller = PageController();
-  static String id = 'chemicalabout';
-  Chemicalabout({super.key});
+  static String id = 'biologyabout';
+  Biologyabout({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Chemical Engineering"),
+          title: Text("Applied Biology"),
           backgroundColor: Colors.white,
           leading: IconButton(
               onPressed: () {
@@ -44,7 +44,7 @@ class Chemicalabout extends StatelessWidget {
                       Roundedexpansion(),
                       RoundedPage(
                           text:
-                              'The Chemical program at our university is designed to equip students with the essential skills and knowledge required to design, develop, and maintain complex software systems. The program blends theoretical foundations with practical applications, ensuring that graduates are well-prepared to tackle real-world challenges in the software industry.',
+                              'The Applied Biology program at our university is designed to equip students with the essential skills and knowledge required to design, develop, and maintain complex software systems. The program blends theoretical foundations with practical applications, ensuring that graduates are well-prepared to tackle real-world challenges in the software industry.',
                           color: Color.fromARGB(255, 255, 255, 255)),
                     ],
                   ),

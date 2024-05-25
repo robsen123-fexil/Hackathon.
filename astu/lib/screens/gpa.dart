@@ -2,10 +2,12 @@
 
 import 'dart:math';
 
+import 'package:astu/constants/constant.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class Cumulative extends StatefulWidget {
-  static String id = 'cummulative';
+  static String id = 'cumulative';
   @override
   _CumulativeState createState() => _CumulativeState();
 }
@@ -19,34 +21,83 @@ class _CumulativeState extends State<Cumulative> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('CGPA Calculator'),
-      ),
-      body: Padding(
-        padding: EdgeInsets.all(16.0),
+      backgroundColor: Colors.white,
+     
+      body: SingleChildScrollView(
+
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            TextField(
-              controller: gradeController,
-              decoration: InputDecoration(labelText: 'Grade (e.g., 4.0)'),
-              keyboardType: TextInputType.numberWithOptions(decimal: true),
+            Container(
+              padding: EdgeInsets.all(20),
+              height: 250,
+              width: double.infinity,
+              decoration: BoxDecoration(
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.withOpacity(0.5),
+                    spreadRadius: 9,
+                    blurRadius: 9,
+                    offset: Offset(0, 3), // changes position of shadow
+                  ),
+                ],
+                borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(30),
+                  bottomRight: Radius.circular(15),
+                ),
+                image: DecorationImage(
+                  image: AssetImage("images/landing.jpg"),
+                  fit: BoxFit.cover,
+                ),
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SizedBox(height: 30),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      IconButton(
+                        onPressed: () {
+                          Navigator.pop(context);
+                        },
+                        icon: Icon(Icons.arrow_back, color: Colors.white),
+                      ),
+                      SizedBox(height: 50),
+                      Text("GPA & CGPA",
+                          style: boldtext.copyWith(color: Colors.white)),
+                    ],
+                  ),
+                ],
+              ),
             ),
-            TextField(
-              controller: creditHourController,
-              decoration: InputDecoration(labelText: 'Credit Hours'),
-              keyboardType: TextInputType.number,
+            SizedBox(height: 16.0),
+            Padding(
+              padding: EdgeInsets.all(10),
+              child: Column(
+                children: [TextField(
+                  controller: gradeController,
+                  decoration: InputDecoration(labelText: 'Grade (e.g., 4.0)'),
+                  keyboardType: TextInputType.numberWithOptions(decimal: true),
+                ),
+                TextField(
+                  controller: creditHourController,
+                  decoration: InputDecoration(labelText: 'Credit Hours'),
+                  keyboardType: TextInputType.number,
+                ),
+                
+          ]),
             ),
-            ElevatedButton(
-              onPressed: () {
-                addGradeAndCreditHour();
-              },
-              child: Text('Add'),
-            ),
+            
+           
             SizedBox(height: 20),
-            Text('Grades: $grades'),
-            Text('Credit Hours: $creditHours'),
-            SizedBox(height: 20),
+            Column(
+              children: [
+                Text('Grades: $grades'),
+                 Text('Credit Hours: $creditHours'),
+                ]),
+           
+            SizedBox(height: 40),
             ElevatedButton(
               onPressed: () {
                 double cgpa = calculateCGPA();
@@ -74,7 +125,6 @@ class _CumulativeState extends State<Cumulative> {
           ],
         ),
       ),
-      
     );
   }
 

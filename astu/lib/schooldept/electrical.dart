@@ -75,15 +75,18 @@ class Electrical extends StatelessWidget {
                           ),
                         ),
                         SizedBox(width: 10),
-                        ElevatedButton(
-                          onPressed: () {
-                            Navigator.pushNamed(context, Cse.id);
-                          },
-                          child: Text(
-                            "Computer Engineering",
-                            style: TextStyle(color: Colors.black),
+                         Expanded(
+                          child: ElevatedButton(
+                            onPressed: () {
+                              Navigator.pushNamed(context, Power.id);
+                            },
+                            child: Text(
+                              "Power & Control",
+                              style: TextStyle(color: Colors.black),
+                            ),
                           ),
                         ),
+                       
                       ],
                     ),
                   ),
@@ -103,17 +106,7 @@ class Electrical extends StatelessWidget {
                           ),
                         ),
                         SizedBox(width: 10),
-                        Expanded(
-                          child: ElevatedButton(
-                            onPressed: () {
-                              Navigator.pushNamed(context, Power.id);
-                            },
-                            child: Text(
-                              "Power and Control",
-                              style: TextStyle(color: Colors.black),
-                            ),
-                          ),
-                        ),
+                       
                       ],
                     ),
                   ),

@@ -6,8 +6,15 @@ import 'package:astu/clubs/antidrug.dart';
 import 'package:astu/clubs/csec.dart';
 import 'package:astu/clubs/spacescience.dart';
 import 'package:astu/course/applied2.dart';
+import 'package:astu/curriculum/applied/biology.dart';
+import 'package:astu/curriculum/applied/geology.dart';
+import 'package:astu/curriculum/applied/pharmacy.dart';
+import 'package:astu/curriculum/civil/arch.dart';
+import 'package:astu/curriculum/civil/civil.dart';
+import 'package:astu/curriculum/civil/water.dart';
 import 'package:astu/curriculum/csec.dart';
 import 'package:astu/curriculum/electronics.dart';
+import 'package:astu/curriculum/mechanical/chemical.dart';
 import 'package:astu/curriculum/mechanical/materail.dart';
 import 'package:astu/curriculum/mechanical/mechanical.dart';
 import 'package:astu/curriculum/power.dart';
@@ -119,7 +126,15 @@ class MyApp extends StatelessWidget {
         Schedule.id: (context) => Schedule(),
         Rulespage.id: (context) => Rulespage(),
         Mechanicalabout.id: (context) => Mechanicalabout(),
-        Materialabout.id:(context)=>Materialabout()
+        Materialabout.id:(context)=>Materialabout(),
+        Chemicalabout.id:(context)=>Chemicalabout(),
+        Civil.id:(context)=>Civil(),
+        Archabout.id:(context)=>Archabout(),
+        Biologyabout.id:(context)=>Biologyabout(),
+        Pharmacy.id:(context)=>Pharmacy(),
+        Geologyabout.id:(context)=>Geologyabout(),
+        Waterabout.id:(context)=>Waterabout(),
+        Civilabout.id:(context)=>Civilabout()
         
       },
     );

@@ -25,17 +25,52 @@ class _SchoolListState extends State<SchoolList> {
       body: ListView(
         children: [
           Container(
-            height: 200,
+            padding: EdgeInsets.all(20),
+            height: 250,
             width: double.infinity,
-            
-            decoration: BoxDecoration( 
-              borderRadius: BorderRadius.only(bottomRight:Radius.circular(20), bottomLeft: Radius.circular(20)),
-              image: DecorationImage(image: AssetImage('images/landing.jpg') , fit: BoxFit.cover)
+            decoration: BoxDecoration(
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.grey.withOpacity(0.5),
+                  spreadRadius: 9,
+                  blurRadius: 9,
+                  offset: Offset(0, 3), // changes position of shadow
+                ),
+              ],
+              borderRadius: BorderRadius.only(
+                bottomLeft: Radius.circular(30),
+                bottomRight: Radius.circular(15),
+              ),
+              image: DecorationImage(
+                image: AssetImage("images/landing.jpg"),
+                fit: BoxFit.cover,
+              ),
             ),
-            child: Padding(
-              padding: EdgeInsets.only(left: 30 , top: 100),
-              child: Text("Curriculum", style: TextStyle(color: Colors.white, fontSize: 50, fontWeight: FontWeight.bold),)),
-           ),
+            child:
+                Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+              SizedBox(
+                height: 30,
+              ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Container(
+                      child: IconButton(
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
+                          icon: Icon(
+                            Icons.arrow_back,
+                            color: Colors.white,
+                          ))),
+                  SizedBox(
+                    height: 50,
+                  ),
+                  Text("Curriculum", style: boldtext.copyWith(color: Colors.white))
+                ],
+              ),
+            ]),
+          ),
           SizedBox(
             height: 20,
           ),

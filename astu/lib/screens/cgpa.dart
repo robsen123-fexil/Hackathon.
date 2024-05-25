@@ -114,7 +114,6 @@ class _GradeInputFormState extends State<GradeInputForm> {
 
   void _onItemTapped(int index) {
     if (index == 0) {
-      showResult();
     } else if (index == 1) {
       getCgpa();
     }
@@ -126,103 +125,161 @@ class _GradeInputFormState extends State<GradeInputForm> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          'CGPA/GPA Calculator',
-          style: boldtext,
-        ),
-      ),
-      body: Padding(
-        padding: const EdgeInsets.all(16),
-        child: Form(
-          key: _formKey,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              DropdownButtonFormField<String>(
-                value: _selectedGrade,
-                items: _gradePoints.keys.map((String grade) {
-                  return DropdownMenuItem<String>(
-                    value: grade,
-                    child: Text(grade),
-                  );
-                }).toList(),
-                onChanged: (newValue) {
-                  setState(() {
-                    _selectedGrade = newValue!;
-                  });
-                },
-                onSaved: (newValue) {
-                  _selectedGrade = newValue!;
-                },
-                decoration: InputDecoration(
-                  labelText: 'Select Grade',
+      backgroundColor: Colors.white,
+      body: Column(
+        children: [
+          Container(
+            padding: EdgeInsets.all(20),
+            height: 250,
+            width: double.infinity,
+            decoration: BoxDecoration(
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.grey.withOpacity(0.5),
+                  spreadRadius: 9,
+                  blurRadius: 9,
+                  offset: Offset(0, 3), // changes position of shadow
                 ),
+              ],
+              borderRadius: BorderRadius.only(
+                bottomLeft: Radius.circular(30),
+                bottomRight: Radius.circular(15),
               ),
-              TextFormField(
-                decoration: InputDecoration(
-                  labelText: 'Credit Hours',
+              image: DecorationImage(
+                image: AssetImage("images/landing.jpg"),
+                fit: BoxFit.cover,
+              ),
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SizedBox(height: 30),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    IconButton(
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                      icon: Icon(Icons.arrow_back, color: Colors.white),
+                    ),
+                    SizedBox(height: 50),
+                    Text("GPA & CGPA",
+                        style: boldtext.copyWith(color: Colors.white)),
+                  ],
                 ),
-                keyboardType: TextInputType.number,
-                validator: (value) {
-                  if (value == null || value.isEmpty) {
-                    return 'Please enter credit hours';
-                  }
-                  final n = int.tryParse(value);
-                  if (n == null || n <= 0) {
-                    return 'Please enter a valid number';
-                  }
-                  return null;
-                },
-                onSaved: (value) {
-                  _creditHours = int.parse(value!);
-                },
-              ),
-              SizedBox(height: 25),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  ElevatedButton(
-                    onPressed: _addSubject,
-                    child: Text(
-                      'Add Subject',
-                      style: TextStyle(color: Colors.black),
-                    ),
-                  ),
-                  SizedBox(width: 10),
-                  ElevatedButton(
-                    onPressed: _clearAll,
-                    child: Text(
-                      'Clear All',
-                      style: TextStyle(color: Colors.black),
-                    ),
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.red,
-                    ),
-                  ),
-                ],
-              ),
-              SizedBox(height: 20),
-              Text(
-                'Subjects:',
-                style: TextStyle(fontSize: 20),
-              ),
-              Expanded(
-                child: ListView.builder(
-                  itemCount: subjects.length,
-                  itemBuilder: (context, index) {
-                    final subject = subjects[index];
-                    return ListTile(
-                      title: Text(
-                        '${subject.grade} : ${subject.creditHours} Credit Hours',
-                      ),
-                    );
-                  },
-                ),
-              ),
-            ],
+              ],
+            ),
           ),
-        ),
+          SizedBox(
+            height: 40,
+          ),
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.all(16),
+              child: Form(
+                key: _formKey,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    DropdownButtonFormField<String>(
+                      value: _selectedGrade,
+                      items: _gradePoints.keys.map((String grade) {
+                        return DropdownMenuItem<String>(
+                          value: grade,
+                          child: Text(grade),
+                        );
+                      }).toList(),
+                      onChanged: (newValue) {
+                        setState(() {
+                          _selectedGrade = newValue!;
+                        });
+                      },
+                      onSaved: (newValue) {
+                        _selectedGrade = newValue!;
+                      },
+                      decoration: InputDecoration(
+                        labelText: 'Select Grade',
+                      ),
+                    ),
+                    TextFormField(
+                      decoration: InputDecoration(
+                        labelText: 'Credit Hours',
+                      ),
+                      keyboardType: TextInputType.number,
+                      validator: (value) {
+                        if (value == null || value.isEmpty) {
+                          return 'Please enter credit hours';
+                        }
+                        final n = int.tryParse(value);
+                        if (n == null || n <= 0) {
+                          return 'Please enter a valid number';
+                        }
+                        return null;
+                      },
+                      onSaved: (value) {
+                        _creditHours = int.parse(value!);
+                      },
+                    ),
+                    SizedBox(height: 25),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        ElevatedButton(
+                          onPressed: _addSubject,
+                          child: Text(
+                            'Add Subject',
+                            style: TextStyle(color: Colors.black),
+                          ),
+                        ),
+                        SizedBox(width: 10),
+                        
+                        ElevatedButton(
+                          onPressed: _clearAll,
+                          child: Text(
+                            'Clear All',
+                            style: TextStyle(color: Colors.black),
+                          ),
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.red,
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 20),
+                    ElevatedButton(
+                      onPressed: () {
+                        showResult();
+                      },
+                      child: Text(
+                        'Result',
+                        style: TextStyle(color: Colors.black),
+                      ),
+                    ),
+                    SizedBox(width: 20),
+                    Text(
+                      'Subjects:',
+                      style: TextStyle(fontSize: 20),
+                    ),
+                    Expanded(
+                      child: ListView.builder(
+                        itemCount: subjects.length,
+                        itemBuilder: (context, index) {
+                          final subject = subjects[index];
+                          return ListTile(
+                            title: Text(
+                              '${subject.grade} : ${subject.creditHours} Credit Hours',
+                            ),
+                          );
+                        },
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ],
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
@@ -232,8 +289,7 @@ class _GradeInputFormState extends State<GradeInputForm> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.spellcheck),
-            label: 'CGPA' , backgroundColor: Colors.white,
-            
+            label: 'CGPA',
           ),
         ],
         currentIndex: _selectedIndex,

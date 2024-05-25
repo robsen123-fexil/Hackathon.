@@ -15,30 +15,54 @@ class MealSchedule extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          leading: IconButton(
-            onPressed: () {
-              Navigator.pop(context);
-            },
-            icon: Icon(Icons.arrow_back),
-          ),
-          backgroundColor: Color.fromARGB(255, 255, 255, 255), // Changed the app bar color
-        ),
+        backgroundColor: Colors.white,
+        
         body: Column(
+          
           children: [
-            Row(
-              children: [
-                Padding(
-                  padding: EdgeInsets.all(20),
-                  child: Text(
-                    "Weekend Meals Schedule",
-                    style: boldtext.copyWith(
-                        color: const Color.fromARGB(255, 0, 0, 0)), // Changed the text color
+            Container(
+              padding: EdgeInsets.all(20),
+              height: 250,
+              width: double.infinity,
+              decoration: BoxDecoration(
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.withOpacity(0.5),
+                    spreadRadius: 9,
+                    blurRadius: 9,
+                    offset: Offset(0, 3), // changes position of shadow
                   ),
-                )
-              ],
-            ),
-            SizedBox(
+                ],
+                borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(30),
+                  bottomRight: Radius.circular(15),
+                ),
+                image: DecorationImage(
+                  image: AssetImage("images/landing.jpg"),
+                  fit: BoxFit.cover,
+                ),
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SizedBox(height: 30),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      IconButton(
+                        onPressed: () {
+                          Navigator.pop(context);
+                        },
+                        icon: Icon(Icons.arrow_back, color: Colors.white),
+                      ),
+                      SizedBox(height: 50),
+                      Text("Cafe Schedule",
+                          style: boldtext.copyWith(color: Colors.white)),
+                    ],
+                  ),
+                ],
+              ),
+            ),SizedBox(
               height: 500,
               child: Column(
                 children: [

@@ -93,7 +93,7 @@ class Phone extends StatelessWidget {
                     color: Colors.black,
                   ),
                   RoundedPhone(
-                    name: "Fire Service",
+                    name: "Deparment Head's",
                     no: "+251933445566",
                   ),
                   Divider(
@@ -117,40 +117,40 @@ class Phone extends StatelessWidget {
                     color: Colors.black,
                   ),
                   RoundedPhone(
-                    name: "Dormitory",
-                    no: "+251933445566",
+                    name: "Dean ,SoEEC",
+                    no: "+25193038966",
                   ),
                   Divider(
                     height: 2,
                     color: Colors.black,
                   ),
                   RoundedPhone(
-                    name: "Dormitory",
-                    no: "+251933445566",
+                    name: "CSE Head",
+                    no: "+25195405566",
                   ),
                   Divider(
                     height: 2,
                     color: Colors.black,
                   ),
                   RoundedPhone(
-                    name: "Dormitory",
-                    no: "+251933445566",
+                    name: "SOCAE",
+                    no: "+25194329026",
                   ),
                   Divider(
                     height: 2,
                     color: Colors.black,
                   ),
                   RoundedPhone(
-                    name: "Dormitory",
-                    no: "+251933445566",
+                    name: "Association Dean For Student",
+                    no: "+25195445566",
                   ),
                   Divider(
                     height: 2,
                     color: Colors.black,
                   ),
                   RoundedPhone(
-                    name: "Dormitory",
-                    no: "+251933445566",
+                    name: "Associate Dean For Acadamic Affair's",
+                    no: "+25193738566",
                   ),
                   Divider(
                     height: 2,

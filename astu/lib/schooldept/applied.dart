@@ -1,5 +1,8 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:astu/curriculum/applied/biology.dart';
+import 'package:astu/curriculum/applied/geology.dart';
+import 'package:astu/curriculum/applied/pharmacy.dart';
 import 'package:flutter/material.dart';
 import 'package:astu/constants/constant.dart';
 
@@ -51,12 +54,9 @@ class Applied extends StatelessWidget {
                 children: [
                   Padding(
                     padding: EdgeInsets.all(10),
-                    child: ElevatedButton(
-                      onPressed: () {},
-                      child: Text(
-                        "Department",
-                        style: boldtext,
-                      ),
+                    child: Text(
+                      "Department",
+                      style: boldtext,
                     ),
                   ),
                 ],
@@ -66,7 +66,9 @@ class Applied extends StatelessWidget {
                   Padding(
                     padding: EdgeInsets.all(10),
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, Biologyabout.id);
+                      },
                       child: Text(
                         "Biology",
                         style: TextStyle(color: Colors.black),
@@ -78,7 +80,9 @@ class Applied extends StatelessWidget {
                   ),
                   Expanded(
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, Geologyabout.id);
+                      },
                       child: Text(
                         "Geology",
                         style: TextStyle(color: Colors.black),
@@ -91,7 +95,9 @@ class Applied extends StatelessWidget {
                 children: [
                   Expanded(
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, Pharmacy.id);
+                      },
                       child: Text(
                         "Pharmacy",
                         style: TextStyle(color: Colors.black),

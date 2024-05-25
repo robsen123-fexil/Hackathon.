@@ -1,5 +1,8 @@
 // ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors
 
+import 'package:astu/curriculum/civil/arch.dart';
+import 'package:astu/curriculum/civil/civil.dart';
+import 'package:astu/curriculum/civil/water.dart';
 import 'package:flutter/material.dart';
 import 'package:astu/constants/constant.dart';
 
@@ -65,7 +68,9 @@ class Civil extends StatelessWidget {
                     Padding(
                       padding: EdgeInsets.all(10),
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushNamed(context, Civilabout.id);
+                        },
                         child: Text(
                           "Civil Engineering",
                           style: TextStyle(color: Colors.black),
@@ -79,7 +84,9 @@ class Civil extends StatelessWidget {
                       child: Padding(
                         padding: EdgeInsets.all(10),
                         child: ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.pushNamed(context, Archabout.id);
+                          },
                           child: Text(
                             "Architectural Eng'",
                             style: TextStyle(color: Colors.black),
@@ -95,7 +102,9 @@ class Civil extends StatelessWidget {
                       child: Padding(
                         padding: EdgeInsets.all(10),
                         child: ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.pushNamed(context, Waterabout.id);
+                          },
                           child: Text(
                             "Water Engineering",
                             style: TextStyle(color: Colors.black),
