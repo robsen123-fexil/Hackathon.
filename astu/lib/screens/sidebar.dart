@@ -1,6 +1,8 @@
 // ignore_for_file: prefer_const_constructors, use_key_in_widget_constructors
 
 import 'package:astu/screens/cgpa.dart';
+import 'package:astu/screens/phone.dart';
+import 'package:astu/screens/rulespage.dart';
 import 'package:astu/screens/schoollist.dart';
 import 'package:astu/screens/searchcourse.dart';
 import 'package:flutter/material.dart';
@@ -56,31 +58,17 @@ class Sidebar extends StatelessWidget {
                 Navigator.pushNamed(context, SchoolList.id);
               },
             ),
-            ListTile(
-              leading: Icon(Icons.schedule),
-              title: Text('Schedule' , style: TextStyle(fontSize: 18),),
-              onTap: () {
-                Navigator.pop(context);
-              },
-            ),
+            
             ListTile(
               leading: Icon(Icons.phone),
               title: Text('Phone List',
                 style: TextStyle(fontSize: 18),
               ),
               onTap: () {
-                Navigator.pushNamed(context, GradeInputForm.id);
+                Navigator.pushNamed(context, Phone.id);
               },
             ),
-            ListTile(
-              leading: Icon(Icons.calculate),
-              title: Text('Calculator',
-                style: TextStyle(fontSize: 18),
-              ),
-              onTap: () {
-                Navigator.pushNamed(context, GradeInputForm.id);
-              },
-            ),
+           
             ListTile(
               leading: Icon(Icons.calculate),
               title: Text(
@@ -88,7 +76,7 @@ class Sidebar extends StatelessWidget {
                 style: TextStyle(fontSize: 18),
               ),
               onTap: () {
-                Navigator.pushNamed(context, GradeInputForm.id);
+                Navigator.pushNamed(context, Rulespage.id);
               },
             ),
           ],

@@ -1,5 +1,7 @@
 // ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors
 
+import 'package:astu/curriculum/mechanical/materail.dart';
+import 'package:astu/curriculum/mechanical/mechanical.dart';
 import 'package:flutter/material.dart';
 import 'package:astu/constants/constant.dart';
 
@@ -54,7 +56,9 @@ class Mechanical extends StatelessWidget {
             child: Row(
               children: [
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, Mechanicalabout.id);
+                  },
                   child: Text(
                     "Mechanical Engineering",
                     style: TextStyle(color: Colors.black),
@@ -63,7 +67,9 @@ class Mechanical extends StatelessWidget {
                 SizedBox(width: 10),
                 Expanded(
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, Materialabout.id);
+                    },
                     child: Text(
                       "Material Eng'",
                       style: TextStyle(color: Colors.black),

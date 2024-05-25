@@ -4,18 +4,18 @@ import 'package:astu/constants/constant.dart';
 import 'package:astu/curriculum/expansion.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-import 'page.dart'; // Import the RoundedPage widget
+import 'package:astu/curriculum/page.dart'; // Import the RoundedPage widget
 
-class About extends StatelessWidget {
+class Mechanicalabout extends StatelessWidget {
   final PageController _controller = PageController();
-  static String id = 'about';
-  About({super.key});
+  static String id = 'mechanicalabout';
+  Mechanicalabout({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("SoftWare Engineering"),
+          title: Text("Electronics & Communication"),
           backgroundColor: Colors.white,
           leading: IconButton(
               onPressed: () {
@@ -41,13 +41,10 @@ class About extends StatelessWidget {
                   child: PageView(
                     controller: _controller,
                     children: [
-                      RoundedPage(
-                          text:
-                              'The Software Engineering program at our university is designed to equip students with the essential skills and knowledge required to design, develop, and maintain complex software systems. The program blends theoretical foundations with practical applications, ensuring that graduates are well-prepared to tackle real-world challenges in the software industry.',
-                          color: Color.fromARGB(255, 255, 255, 255)),
                       Roundedexpansion(),
                       RoundedPage(
-                          text: 'Page 3',
+                          text:
+                              'The Mechanical program at our university is designed to equip students with the essential skills and knowledge required to design, develop, and maintain complex software systems. The program blends theoretical foundations with practical applications, ensuring that graduates are well-prepared to tackle real-world challenges in the software industry.',
                           color: Color.fromARGB(255, 255, 255, 255)),
                     ],
                   ),
@@ -55,7 +52,7 @@ class About extends StatelessWidget {
                 SizedBox(height: 16),
                 SmoothPageIndicator(
                   controller: _controller,
-                  count: 3,
+                  count: 2,
                   effect: WormEffect(
                     dotHeight: 8.0,
                     dotWidth: 8.0,

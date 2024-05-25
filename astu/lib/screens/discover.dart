@@ -1,11 +1,13 @@
 // ignore_for_file: prefer_const_constructors, prefer_final_fields, avoid_print
 
 
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:astu/screens/gpa.dart';
 import 'package:astu/screens/home.dart';
 import 'package:astu/screens/mapscreen.dart';
 import 'package:astu/screens/mealplan.dart';
 import 'package:astu/screens/phone.dart';
+import 'package:astu/screens/place.dart';
 import 'package:astu/screens/schoollist.dart';
 import 'package:flutter/material.dart';
 import 'package:astu/constants/constant.dart';
@@ -17,6 +19,7 @@ import 'package:astu/screens/clubs.dart';
 import 'package:astu/component/greeting.dart';
 import 'package:astu/screens/searchcourse.dart';
 import 'package:astu/screens/sidebar.dart';
+import 'package:astu/screens/database.dart';
 
 class DiscoveryPage extends StatefulWidget {
   static String id = 'discovery';
@@ -26,9 +29,44 @@ class DiscoveryPage extends StatefulWidget {
   State<DiscoveryPage> createState() => _DiscoveryPageState();
 }
 
-class _DiscoveryPageState extends State<DiscoveryPage> {
+class _DiscoveryPageState extends State<DiscoveryPage> with SingleTickerProviderStateMixin {
   TextEditingController searchController = TextEditingController();
+  final DatabaseHelper _database = DatabaseHelper();
+  String? _name;
+  String? _email;
   int _selectedindex = 0;
+   late final AnimationController controller; // Changed to late final
+  Animation? animation;
+  @override
+  void initState() {
+    super.initState();
+    _fetchUserData();
+     controller = AnimationController(
+      duration: Duration(seconds: 1),
+      vsync: this,
+
+    );
+     controller
+        .forward(); // Changed from controller?.forward() to controller.forward()
+    controller.addListener(() {
+      setState(() {});
+    });
+  }
+  void _fetchUserData() async {
+    final userData = await _database.getSingleUser();
+    if (userData != null) {
+      setState(() {
+        _name = userData['name'];
+        _email = userData['email'];
+      });
+    }
+  }
+   @override
+     void dispose() {
+    // Added dispose method to clean up the controller
+    controller.dispose();
+    super.dispose();
+  }
   void _ontapped(int index) {
     if (index == 1) {
       Navigator.pushNamed(context, Courses.id);
@@ -51,13 +89,14 @@ class _DiscoveryPageState extends State<DiscoveryPage> {
     }
   }
 
+
   @override
   Widget build(BuildContext context) {
     print(getgreeting());
     return Scaffold(
       drawer: Sidebar(),
       backgroundColor: 
-              Colors.teal[50], 
+              const Color.fromARGB(255, 255, 255, 255), 
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -86,31 +125,48 @@ class _DiscoveryPageState extends State<DiscoveryPage> {
                   fit: BoxFit.cover,
                 ),
               ),
-              child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Builder(
-                      builder: (context)=>
-                       IconButton(
-                          onPressed: () {
-                            Scaffold.of(context).openDrawer();
-                          },
-                          icon: Icon(Icons.menu) ,iconSize: 30,color: Colors.white,),
-                    ),
-                    SizedBox(
-                      height: 20,
-                    ),
-                    Text("Hello",
-                        style: boldtext.copyWith(color: Colors.white)),
-                    SizedBox(
-                      height: 20,
-                    ),
-                    Text(
-                      getgreeting(),
-                      style: boldtext.copyWith(color: Colors.white),
-                    ),
-                    
-                  ]),
+              child: SingleChildScrollView(
+                child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Builder(
+                        builder: (context)=>
+                         IconButton(
+                            onPressed: () {
+                              Scaffold.of(context).openDrawer();
+                            },
+                            icon: Icon(Icons.menu) ,iconSize: 30,color: Colors.white,),
+                      ),
+                      SizedBox(
+                        height: 20,
+                      ),
+                     
+                      AnimatedTextKit(
+                    animatedTexts: [
+                      TypewriterAnimatedText(
+                        "Welcome ",
+                        textStyle: TextStyle(
+                          fontSize: 35.0,
+                          color: const Color.fromARGB(255, 255, 255, 255),
+                          fontWeight: FontWeight.w900,
+                        ),
+                        speed: Duration(milliseconds: 100),
+                      )
+                    ],
+                    totalRepeatCount: 1,
+                  ),
+                   Text(" $_name",
+                          style: boldtext.copyWith(color: Colors.white)),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      Text(
+                        getgreeting(),
+                        style: boldtext.copyWith(color: Colors.white),
+                      ),
+                      
+                    ]),
+              ),
             ),
             Padding(
               padding: EdgeInsets.all(40),
@@ -121,7 +177,7 @@ class _DiscoveryPageState extends State<DiscoveryPage> {
                       "Explore Catergories",
                       style: boldtext.copyWith(
                           fontSize: 20,
-                          color: Color.fromARGB(255, 37, 73, 105)),
+                          color: Color.fromARGB(255, 0, 0, 0)),
                     ),
                     
                   ]),
@@ -132,9 +188,11 @@ class _DiscoveryPageState extends State<DiscoveryPage> {
                   children: [
                     Expanded(
                       child: RoundedButton(
-                        icons: Icon(
-                          Icons.school_rounded,
-                          size: 50,
+                        icons: Center(
+                          child: Icon(
+                            Icons.school_rounded,
+                            size: 50,
+                          ),
                         ),
                         title: "Curriculum",
                         ontap: () {
@@ -147,9 +205,11 @@ class _DiscoveryPageState extends State<DiscoveryPage> {
                     ),
                     Expanded(
                       child: RoundedButton(
-                        icons: Icon(
-                          Icons.local_dining,
-                          size: 50,
+                        icons: Center(
+                          child: Icon(
+                            Icons.local_dining,
+                            size: 50,
+                          ),
                         ),
                         title: "Discover Food",
                         ontap: () {
@@ -159,9 +219,11 @@ class _DiscoveryPageState extends State<DiscoveryPage> {
                     ),
                     Expanded(
                       child: RoundedButton(
-                        icons: Icon(
-                          Icons.calculate_outlined,
-                          size: 50,
+                        icons: Center(
+                          child: Icon(
+                            Icons.calculate_outlined,
+                            size: 50,
+                          ),
                         ),
                         title: "Grade Calculator",
                         ontap: () {
@@ -184,9 +246,11 @@ class _DiscoveryPageState extends State<DiscoveryPage> {
                   children: [
                     Expanded(
                       child: RoundedButton(
-                        icons: Icon(
-                          Icons.rule,
-                          size: 50,
+                        icons: Center(
+                          child: Icon(
+                            Icons.rule,
+                            size: 50,
+                          ),
                         ),
                         title: "Discover Rules",
                         ontap: () {
@@ -202,9 +266,11 @@ class _DiscoveryPageState extends State<DiscoveryPage> {
                     ),
                     Expanded(
                       child: RoundedButton(
-                        icons: Icon(
-                          Icons.location_searching,
-                          size: 50,
+                        icons: Center(
+                          child: Icon(
+                            Icons.location_searching,
+                            size: 50,
+                          ),
                         ),
                         title: "Discover NearBy",
                         ontap: () {
@@ -214,9 +280,11 @@ class _DiscoveryPageState extends State<DiscoveryPage> {
                     ),
                     Expanded(
                       child: RoundedButton(
-                        icons: Icon(
-                          Icons.phone,
-                          size: 50,
+                        icons: Center(
+                          child: Icon(
+                            Icons.phone,
+                            size: 50,
+                          ),
                         ),
                         title: "Phone Number",
                         ontap: () {
@@ -232,6 +300,67 @@ class _DiscoveryPageState extends State<DiscoveryPage> {
                 SizedBox(
                   height: 10,
                 ),
+                Row( 
+                  children: [ 
+                    Expanded(
+                      child: RoundedButton(
+                        icons: Center(
+                          child: Icon(
+                            Icons.location_pin,
+                            size: 50,
+                          ),
+                        ),
+                        title: "Place",
+                        ontap: () {
+                          Navigator.pushNamed(
+                              context,
+                              Place.id);
+                        },
+                      ),
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Expanded(
+                      child: RoundedButton(
+                        icons: Center(
+                          child: Icon(
+                            Icons.calculate_outlined,
+                            size: 50,
+                          ),
+                        ),
+                        title: "Grade Calculator",
+                        ontap: () {
+                         Navigator.pushNamed(context, Place.id);
+                        },
+                      ),
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Expanded(
+                      child: RoundedButton(
+                        icons: Center(
+                          child: Icon(
+                            Icons.calculate_outlined,
+                            size: 50,
+                          ),
+                        ),
+                        title: "Grade Calculator",
+                        ontap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => GradeInputForm()));
+                        },
+                      ),
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    
+                  ],
+                )
                 
                
               ],

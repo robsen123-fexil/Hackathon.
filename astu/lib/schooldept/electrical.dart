@@ -1,6 +1,9 @@
 // ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors
 
-import 'package:astu/curriculum/about.dart';
+import 'package:astu/curriculum/csec.dart';
+import 'package:astu/curriculum/electronics.dart';
+import 'package:astu/curriculum/power.dart';
+import 'package:astu/curriculum/software.dart';
 
 import 'package:flutter/material.dart';
 import 'package:astu/constants/constant.dart';
@@ -64,7 +67,7 @@ class Electrical extends StatelessWidget {
                       children: [
                         ElevatedButton(
                           onPressed: () {
-                            Navigator.pushNamed(context, About.id);
+                            Navigator.pushNamed(context, Softwareabout.id);
                           },
                           child: Text(
                             "SoftWare Engineering",
@@ -73,7 +76,9 @@ class Electrical extends StatelessWidget {
                         ),
                         SizedBox(width: 10),
                         ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.pushNamed(context, Cse.id);
+                          },
                           child: Text(
                             "Computer Engineering",
                             style: TextStyle(color: Colors.black),
@@ -88,7 +93,9 @@ class Electrical extends StatelessWidget {
                       children: [
                         Expanded(
                           child: ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.pushNamed(context, Electronics.id);
+                            },
                             child: Text(
                               "Electronics & Communication",
                               style: TextStyle(color: Colors.black),
@@ -98,7 +105,9 @@ class Electrical extends StatelessWidget {
                         SizedBox(width: 10),
                         Expanded(
                           child: ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.pushNamed(context, Power.id);
+                            },
                             child: Text(
                               "Power and Control",
                               style: TextStyle(color: Colors.black),

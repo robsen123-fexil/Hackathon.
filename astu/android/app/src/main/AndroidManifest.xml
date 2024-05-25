@@ -6,6 +6,12 @@
         android:label="astu"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
+        
+        <!-- Add your Google Maps API key here -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBt4V2b9YYSGJdiD8bcmmcuvjRs6YEwWDc"/>
+
         <activity
             android:name=".MainActivity"
             android:exported="true"
