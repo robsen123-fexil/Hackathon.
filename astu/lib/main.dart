@@ -28,12 +28,14 @@ import 'package:astu/curriculum/mechanical/materail.dart';
 import 'package:astu/curriculum/mechanical/mechanical.dart';
 import 'package:astu/curriculum/power.dart';
 import 'package:astu/curriculum/software.dart';
-import 'package:astu/maps/amphy.dart';
+import 'package:astu/maps/launge&amphy.dart';
+import 'package:astu/maps/stadium.dart';
 import 'package:astu/maps/females.dart';
 import 'package:astu/maps/libraris.dart';
 import 'package:astu/maps/clinics.dart';
 import 'package:astu/maps/dean.dart';
 import 'package:astu/maps/cafe.dart';
+import 'package:astu/screens/calendar.dart';
 import 'package:astu/screens/feature.dart';
 import 'package:astu/screens/landings.dart';
 import 'package:astu/screens/mapscreen.dart';
@@ -106,7 +108,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: isDatabaseEmpty ? InsertScreen.id : LandingPage.id,
+      initialRoute: isDatabaseEmpty ? InsertScreen.id : DiscoveryPage.id,
       routes: {
         InsertScreen.id: (context) => InsertScreen(),
         DiscoveryPage.id: (context) => DiscoveryPage(),
@@ -153,7 +155,7 @@ class MyApp extends StatelessWidget {
         Amc.id: (context) => Amc(),
         Mini.id: (context) => Mini(),
         Libraries.id: (context) => Libraries(),
-        Amphy.id: (context) => Amphy(),
+        
         Females.id: (context) => Females(),
         Cafe.id: (context) => Cafe(),
         DeanOffice.id: (context) => DeanOffice(),
@@ -161,7 +163,11 @@ class MyApp extends StatelessWidget {
         Chemistry.id:(context)=>Chemistry(),
         Computing.id:(context)=>Computing(),
         Logic.id:(context)=>Logic(),
-        AppliedmathsIII.id:(context)=>AppliedmathsIII()
+        AppliedmathsIII.id:(context)=>AppliedmathsIII(),
+        Stadium.id:(context)=>Stadium(),
+        Females.id:(context)=>Females(),
+        Amphy.id:(context)=>Amphy(),
+        Calendar.id:(context)=>Calendar()
         
       },
     );

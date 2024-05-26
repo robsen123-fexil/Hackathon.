@@ -15,7 +15,7 @@ class Sidebar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Drawer(
       child: Container(
-        color: Colors.teal[50],
+        color: const Color.fromARGB(255, 255, 255, 255),
         child: ListView(
           padding: EdgeInsets.zero,
           children: <Widget>[
@@ -73,6 +73,16 @@ class Sidebar extends StatelessWidget {
               leading: Icon(Icons.calculate),
               title: Text(
                 'Rules & Regulation',
+                style: TextStyle(fontSize: 18),
+              ),
+              onTap: () {
+                Navigator.pushNamed(context, Rulespage.id);
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.calendar_today),
+              title: Text(
+                'Calendar',
                 style: TextStyle(fontSize: 18),
               ),
               onTap: () {

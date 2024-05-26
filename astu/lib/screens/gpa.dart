@@ -77,7 +77,7 @@ class _CumulativeState extends State<Cumulative> {
               child: Column(
                 children: [TextField(
                   controller: gradeController,
-                  decoration: InputDecoration(labelText: 'Grade (e.g., 4.0)'),
+                  decoration: InputDecoration(labelText: 'Grade'),
                   keyboardType: TextInputType.numberWithOptions(decimal: true),
                 ),
                 TextField(
@@ -120,7 +120,7 @@ class _CumulativeState extends State<Cumulative> {
                   },
                 );
               },
-              child: Text('Calculate CGPA'),
+              child: Text('Calculate CGPA' , style: TextStyle(color: Colors.black , fontSize: 20),),
             ),
           ],
         ),

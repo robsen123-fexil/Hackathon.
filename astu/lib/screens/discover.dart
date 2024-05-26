@@ -2,6 +2,7 @@
 
 
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:astu/screens/calendar.dart';
 import 'package:astu/screens/gpa.dart';
 import 'package:astu/screens/home.dart';
 import 'package:astu/screens/mapscreen.dart';
@@ -271,13 +272,13 @@ class _DiscoveryPageState extends State<DiscoveryPage> with SingleTickerProvider
                       child: RoundedButton(
                         icons: Center(
                           child: Icon(
-                            Icons.location_searching,
+                            Icons.calendar_today,
                             size: 50,
                           ),
                         ),
-                        title: "Discover NearBy",
+                        title: "Calendar",
                         ontap: () {
-                          Navigator.pushNamed(context, DiscoveryPage.id);
+                          Navigator.pushNamed(context, Calendar.id);
                         },
                       ),
                     ),
@@ -334,7 +335,7 @@ class _DiscoveryPageState extends State<DiscoveryPage> with SingleTickerProvider
                         ),
                         title: "Clubs",
                         ontap: () {
-                         Navigator.pushNamed(context, Place.id);
+                         Navigator.pushNamed(context, Clubs.id);
                         },
                       ),
                     ),
@@ -369,20 +370,7 @@ class _DiscoveryPageState extends State<DiscoveryPage> with SingleTickerProvider
           ],
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-              icon: Icon(
-                Icons.home,
-              ),
-              label: "Home"),
-          BottomNavigationBarItem(icon: Icon(Icons.book), label: "Course's"),
-          BottomNavigationBarItem(icon: Icon(Icons.people), label: "Club"),
-        ],
-        currentIndex: _selectedindex,
-        selectedItemColor: Color.fromARGB(255, 0, 0, 0),
-        onTap: _ontapped,
-      ),
+      
     );
   }
 }

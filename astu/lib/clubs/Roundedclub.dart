@@ -66,23 +66,13 @@ class RoundedClub extends StatelessWidget {
               height: 20,
             ),
             Text(
-              "Place",
+              "Events",
               style: TextStyle(
                   color: Colors.black,
                   fontSize: 20,
                   fontWeight: FontWeight.bold),
             ),
-            SizedBox(
-              height: 10,
-            ),
-            Text(
-              "   Lab 508 Room 10",
-              style: TextStyle(color: Colors.grey),
-            ),
-            Text(
-              "   Lab 508 Room 9",
-              style: TextStyle(color: Colors.grey),
-            ),
+            
             SizedBox(
               height: 20,
             ),

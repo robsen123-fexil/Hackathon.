@@ -1,6 +1,7 @@
-// ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
+// ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors, use_super_parameters, deprecated_member_use
 
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Coursedetail extends StatelessWidget {
   final String name;
@@ -87,13 +88,38 @@ class Coursedetail extends StatelessWidget {
                   fontSize: 20,
                   fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: 10),
+            SizedBox(height: 20),
+            
+           
             Expanded(
               child: SingleChildScrollView(
                 child: Text(
                   description,
                   style: TextStyle(color: Colors.black, fontSize: 18),
                 ),
+              ),
+            ),
+             SizedBox(height: 10),
+            TextButton(
+              style: TextButton.styleFrom(
+                foregroundColor: const Color.fromARGB(255, 180, 179, 179),
+                backgroundColor: Color.fromARGB(255, 209, 207, 207), // Text color
+                padding: EdgeInsets.symmetric(vertical: 12.0, horizontal: 24.0),
+                textStyle: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+              ),
+              onPressed: () async {
+                const url =
+                    'https://drive.google.com/drive/folders/1YUPBclCL9UPQnS3pQaGKq5smSk0CFj67?usp=drive_link';
+                if (await canLaunch(url)) {
+                  await launch(url);
+                } else {
+                  throw 'Could not launch $url';
+                }
+              },
+              child: Text(
+                "Get Course Outline",
+                style: TextStyle(
+                    color: Color.fromARGB(255, 39, 39, 39), fontSize: 20),
               ),
             ),
           ],

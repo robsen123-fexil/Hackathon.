@@ -26,46 +26,40 @@ class Schedule extends StatelessWidget {
               children: [
                 Padding(
                   padding: EdgeInsets.all(10),
-                  child: Text("Semister Schedule" ,style: TextStyle(fontSize: 30),),
+                  child: Text(
+                    "Semister Schedule",
+                    style: TextStyle(fontSize: 30),
+                  ),
                 )
               ],
             ),
-            SizedBox( 
+            SizedBox(
               height: 20,
             ),
             SingleChildScrollView(
-              child: DataTable(
-                     columns: [
-                       DataColumn(label: Text("Instructor")),
-                       DataColumn(label: Text("Course Code ")),
-                       DataColumn(label: Text("C.Title")),
-                       DataColumn(label: Text("Day")),
-                       DataColumn(label: Text("8:00-9:50")),
-                       DataColumn(label: Text("12:00-7:50")),
-                       DataColumn(label: Text("2:00-3:50")),
-                       DataColumn(label: Text("4:00 - 5:50")),
-              
-                     ],
-                     rows: [
-                       DataRow(cells: [
-                         DataCell(Text("1")),
-                         DataCell(Text("Applied Mathematics I")),
-                         DataCell(Text("4")),
-                          DataCell(Text("None")),
-                           DataCell(Text("None")),
-                            DataCell(Text("None")),
-                             DataCell(Text("None")),
-                              DataCell(Text("None"))
-                       ]),
-               
-               
-                 
-               ]
-               
-               ),
+              child: DataTable(columns: [
+                DataColumn(label: Text("Instructor")),
+                DataColumn(label: Text("Course Code ")),
+                DataColumn(label: Text("C.Title")),
+                DataColumn(label: Text("Day")),
+                DataColumn(label: Text("8:00-9:50")),
+                DataColumn(label: Text("12:00-7:50")),
+                DataColumn(label: Text("2:00-3:50")),
+                DataColumn(label: Text("4:00 - 5:50")),
+              ], rows: [
+                DataRow(cells: [
+                  DataCell(Text("1")),
+                  DataCell(Text("Applied Mathematics I")),
+                  DataCell(Text("4")),
+                  DataCell(Text("None")),
+                  DataCell(Text("None")),
+                  DataCell(Text("None")),
+                  DataCell(Text("None")),
+                  DataCell(Text("None"))
+                ]),
+              ]),
             )
           ],
-          
         ),
       ),
     );
