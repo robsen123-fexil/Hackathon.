@@ -5,8 +5,8 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
-class Cafe extends StatelessWidget {
-  static String id = 'Cafe';
+class Central1 extends StatelessWidget {
+  static String id = 'central';
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +37,7 @@ class Cafe extends StatelessWidget {
             Padding(
               padding: EdgeInsets.all(10),
               child: Text(
-                "Cafe",
+                "Central Library",
                 style: TextStyle(
                   fontSize: 20,
                 ),
@@ -53,7 +53,7 @@ class Cafe extends StatelessWidget {
                   width: 300,
                   decoration: BoxDecoration(
                     image:
-                        DecorationImage(image: AssetImage('images/amphy.jpg')),
+                        DecorationImage(image: AssetImage('images/centralpath.png')),
                   ),
                 ),
               )

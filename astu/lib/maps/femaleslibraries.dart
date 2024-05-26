@@ -5,8 +5,8 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
-class Cafe extends StatelessWidget {
-  static String id = 'Cafe';
+class Femaleslibraries1 extends StatelessWidget {
+  static String id = 'FemalesLibraries1';
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +37,7 @@ class Cafe extends StatelessWidget {
             Padding(
               padding: EdgeInsets.all(10),
               child: Text(
-                "Cafe",
+                "FemalesLibraries",
                 style: TextStyle(
                   fontSize: 20,
                 ),

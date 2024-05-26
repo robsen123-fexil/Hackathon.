@@ -229,7 +229,7 @@ class _DiscoveryPageState extends State<DiscoveryPage> with SingleTickerProvider
                             size: 50,
                           ),
                         ),
-                        title: "Grade Calculator",
+                        title: "Calculator",
                         ontap: () {
                           Navigator.push(
                               context,

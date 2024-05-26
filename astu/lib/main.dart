@@ -28,7 +28,11 @@ import 'package:astu/curriculum/mechanical/materail.dart';
 import 'package:astu/curriculum/mechanical/mechanical.dart';
 import 'package:astu/curriculum/power.dart';
 import 'package:astu/curriculum/software.dart';
+import 'package:astu/maps/central.dart';
+import 'package:astu/maps/deanoffice.dart';
+import 'package:astu/maps/freshmanclass,%5D.dart';
 import 'package:astu/maps/launge&amphy.dart';
+import 'package:astu/maps/launge.dart';
 import 'package:astu/maps/stadium.dart';
 import 'package:astu/maps/females.dart';
 import 'package:astu/maps/libraris.dart';
@@ -154,8 +158,7 @@ class MyApp extends StatelessWidget {
         Eic.id: (context) => Eic(),
         Amc.id: (context) => Amc(),
         Mini.id: (context) => Mini(),
-        Libraries.id: (context) => Libraries(),
-        
+       
         Females.id: (context) => Females(),
         Cafe.id: (context) => Cafe(),
         DeanOffice.id: (context) => DeanOffice(),
@@ -167,7 +170,11 @@ class MyApp extends StatelessWidget {
         Stadium.id:(context)=>Stadium(),
         Females.id:(context)=>Females(),
         Amphy.id:(context)=>Amphy(),
-        Calendar.id:(context)=>Calendar()
+        Calendar.id:(context)=>Calendar(),
+        DeanOffice1.id:(context)=>DeanOffice1(),
+        Central1.id:(context)=>Central1(),
+        Launge1.id:(context)=>Launge1(),
+        Freshmanclass.id:(context)=>Freshmanclass()
         
       },
     );

@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors, use_key_in_widget_constructors
 
+import 'package:astu/screens/calendar.dart';
 import 'package:astu/screens/cgpa.dart';
 import 'package:astu/screens/phone.dart';
 import 'package:astu/screens/rulespage.dart';
@@ -86,7 +87,7 @@ class Sidebar extends StatelessWidget {
                 style: TextStyle(fontSize: 18),
               ),
               onTap: () {
-                Navigator.pushNamed(context, Rulespage.id);
+                Navigator.pushNamed(context, Calendar.id);
               },
             ),
           ],
