@@ -14,7 +14,7 @@ class ExpandableItem extends StatelessWidget {
       backgroundColor: Colors.grey,
       title: Text(
         title,
-        style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+        style: TextStyle(fontSize: 18,),
       ),
       children: [
         Padding(

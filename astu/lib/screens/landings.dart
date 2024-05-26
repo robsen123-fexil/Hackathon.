@@ -20,7 +20,7 @@ class LandingPage extends StatelessWidget {
                 controller: _controller,
                 children: [
                   Feature(
-                    image: 'images/astu.jpg',
+                    image: 'images/astulanding.jpg',
                     about: "Adama Science & Technology University",
                     description:
                         "Our mission is to innovate knowledge through dynamic education, foster research and development for societal advancement, and promote sustainable solutions for global challenges at Adama Science and Technology University.",
@@ -60,7 +60,7 @@ class LandingPage extends StatelessWidget {
                 dotWidth: 8.0,
                 activeDotColor: Color.fromARGB(
                     255, 2, 57, 255), // Changed the active dot color
-                dotColor: Color.fromARGB(255, 231, 49, 49),
+                dotColor: Color.fromARGB(255, 247, 133, 133),
               ),
             ),
             SizedBox(height: 20),

@@ -9,6 +9,7 @@ class Calendar extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        backgroundColor: const Color.fromARGB(255, 255, 255, 255),
         body: SingleChildScrollView(
           child: Column(
             children: [
@@ -48,7 +49,7 @@ class Calendar extends StatelessWidget {
                           icon: Icon(Icons.arrow_back, color: Colors.white),
                         ),
                         SizedBox(height: 50),
-                        Text("GPA & CGPA",
+                        Text("Calendar",
                             style: boldtext.copyWith(color: Colors.white)),
                       ],
                     ),

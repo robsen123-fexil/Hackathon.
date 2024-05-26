@@ -1,14 +1,17 @@
-// ignore_for_file: prefer_const_constructors, unnecessary_import
-
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class RoundedButton extends StatelessWidget {
-  String? title;
-  VoidCallback? ontap;
-  Widget icons;
+  final String title;
+  final VoidCallback ontap;
+  final Widget icon;
 
-  RoundedButton({super.key, required this.title, required this.ontap , required this.icons});
+  RoundedButton({
+    Key? key,
+    required this.title,
+    required this.ontap,
+    required this.icon,
+  }) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -27,17 +30,13 @@ class RoundedButton extends StatelessWidget {
                 BoxShadow(
                   color: Color.fromARGB(255, 96, 96, 96),
                   blurRadius: 5,
-                  // offset: Offset(1, 2),
                 ),
               ],
             ),
             child: Center(
-                child:icons
-              
-              
+              child: icon,
             ),
           ),
-          SizedBox(),
           Divider(
             height: 10,
             thickness: 1,
@@ -46,9 +45,9 @@ class RoundedButton extends StatelessWidget {
             endIndent: 40,
           ),
           Text(
-            title!,
+            title,
             style: TextStyle(fontSize: 15),
-          )
+          ),
         ],
       ),
     );

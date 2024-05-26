@@ -106,7 +106,7 @@ class _DiscoveryPageState extends State<DiscoveryPage> with SingleTickerProvider
             ),
             Container(
               padding: EdgeInsets.all(20),
-              height: 350,
+              height: 250,
               width: double.infinity,
               decoration: BoxDecoration(
                 boxShadow: [
@@ -192,7 +192,7 @@ class _DiscoveryPageState extends State<DiscoveryPage> with SingleTickerProvider
                   children: [
                     Expanded(
                       child: RoundedButton(
-                        icons: Center(
+                        icon: Center(
                           child: Icon(
                             Icons.school_rounded,
                             size: 50,
@@ -209,7 +209,7 @@ class _DiscoveryPageState extends State<DiscoveryPage> with SingleTickerProvider
                     ),
                     Expanded(
                       child: RoundedButton(
-                        icons: Center(
+                        icon: Center(
                           child: Icon(
                             Icons.local_dining,
                             size: 50,
@@ -223,7 +223,7 @@ class _DiscoveryPageState extends State<DiscoveryPage> with SingleTickerProvider
                     ),
                     Expanded(
                       child: RoundedButton(
-                        icons: Center(
+                        icon: Center(
                           child: Icon(
                             Icons.calculate_outlined,
                             size: 50,
@@ -250,7 +250,7 @@ class _DiscoveryPageState extends State<DiscoveryPage> with SingleTickerProvider
                   children: [
                     Expanded(
                       child: RoundedButton(
-                        icons: Center(
+                        icon: Center(
                           child: Icon(
                             Icons.rule,
                             size: 50,
@@ -270,7 +270,7 @@ class _DiscoveryPageState extends State<DiscoveryPage> with SingleTickerProvider
                     ),
                     Expanded(
                       child: RoundedButton(
-                        icons: Center(
+                        icon: Center(
                           child: Icon(
                             Icons.calendar_today,
                             size: 50,
@@ -284,7 +284,7 @@ class _DiscoveryPageState extends State<DiscoveryPage> with SingleTickerProvider
                     ),
                     Expanded(
                       child: RoundedButton(
-                        icons: Center(
+                        icon: Center(
                           child: Icon(
                             Icons.phone,
                             size: 50,
@@ -308,7 +308,7 @@ class _DiscoveryPageState extends State<DiscoveryPage> with SingleTickerProvider
                   children: [ 
                     Expanded(
                       child: RoundedButton(
-                        icons: Center(
+                        icon: Center(
                           child: Icon(
                             Icons.location_pin,
                             size: 50,
@@ -327,7 +327,7 @@ class _DiscoveryPageState extends State<DiscoveryPage> with SingleTickerProvider
                     ),
                     Expanded(
                       child: RoundedButton(
-                        icons: Center(
+                        icon: Center(
                           child: Icon(
                             Icons.people_outlined,
                             size: 50,
@@ -344,7 +344,7 @@ class _DiscoveryPageState extends State<DiscoveryPage> with SingleTickerProvider
                     ),
                     Expanded(
                       child: RoundedButton(
-                        icons: Center(
+                        icon: Center(
                           child: Icon(
                             Icons.book,
                             size: 50,

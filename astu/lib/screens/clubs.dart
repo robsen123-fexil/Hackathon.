@@ -67,7 +67,7 @@ class Clubs extends StatelessWidget {
               Roundedclub(
                 title: "Anti Drug Club",
                 description:
-                    "The Space Science Club is a dynamic group dedicated to exploring and understanding the vast universe beyond our planet. Our club offers members the opportunity to delve into various aspects of space science, including astronomy, astrophysics, and cosmology",
+                    "Our mission is to educate, support, and empower students to make healthy choices and resist peer pressure related to drug use. Through informative workshops, engaging activities, guest speakers, and outreach programs, the Anti-Drug Club aims to foster a safe and supportive environment for all students.",
                 image: "images/antidrug.jpeg",
                 onpress: () {
                   Navigator.pushNamed(context, AntiDrug.id);
@@ -109,13 +109,7 @@ class Clubs extends StatelessWidget {
               SizedBox(
                 height: 10,
               ),
-              Roundedclub(
-                title: "Space Science Club",
-                description:
-                    "The Space Science Club is a dynamic group dedicated to exploring and understanding the vast universe beyond our planet. Our club offers members the opportunity to delve into various aspects of space science, including astronomy, astrophysics, and cosmology",
-                image: "images/Space.jpeg",
-                onpress: () {},
-              ),
+             
               SizedBox(
                 height: 10,
               ),

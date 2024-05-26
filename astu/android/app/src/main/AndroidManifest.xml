@@ -5,7 +5,7 @@
     <application
         android:label="astu"
         android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/launcher_icon">
         
         <!-- Add your Google Maps API key here -->
         <meta-data
