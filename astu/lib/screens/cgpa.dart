@@ -107,7 +107,7 @@ class _GradeInputFormState extends State<GradeInputForm> {
   }
 
   void getCgpa() {
-    Navigator.pushNamed(context, Cumulative.id);
+    Navigator.pushNamed(context, CumulativeCgpaCalculator.id);
   }
 
   int _selectedIndex = 0;

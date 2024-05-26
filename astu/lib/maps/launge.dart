@@ -6,11 +6,18 @@ import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 class Launge1 extends StatelessWidget {
-  static String id = 'Launge1';
+  static String id = 'launge';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        leading: IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: Icon(Icons.arrow_back)),
+      ),
       body: SingleChildScrollView(
         child: Column(children: [
           GestureDetector(
@@ -37,34 +44,10 @@ class Launge1 extends StatelessWidget {
             Padding(
               padding: EdgeInsets.all(10),
               child: Text(
-                "Launge1",
+                "Launge & Amphy",
                 style: TextStyle(
-                  fontSize: 20,
+                  fontSize: 30,
                 ),
-              ),
-            )
-          ]),
-          Row(
-            children: [
-              Padding(
-                padding: EdgeInsets.all(10),
-                child: Container(
-                  height: 200,
-                  width: 300,
-                  decoration: BoxDecoration(
-                    image:
-                        DecorationImage(image: AssetImage('images/amphy.jpg')),
-                  ),
-                ),
-              )
-            ],
-          ),
-          Row(children: [
-            Padding(
-              padding: EdgeInsets.all(10),
-              child: Text(
-                "Open for 24 hour ",
-                style: TextStyle(fontSize: 20),
               ),
             )
           ]),
@@ -73,12 +56,82 @@ class Launge1 extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.all(10),
                 child: Text(
-                  "BLOCK 107",
+                  "around females library",
                   style: TextStyle(fontSize: 20),
                 ),
               )
             ],
-          )
+          ),
+          Container(
+            height: 200, // Adjust the height as needed
+            decoration: BoxDecoration(
+              borderRadius:
+                  BorderRadius.circular(10), // optional, for rounded corners
+              image: DecorationImage(
+                image: AssetImage('images/laoungepath.png'),
+                fit: BoxFit
+                    .cover, // This ensures the image covers the entire container
+              ),
+            ),
+          ),
+          Row(
+            children: [
+              // Left image
+              Expanded(
+                child: Padding(
+                  padding: EdgeInsets.all(10),
+                  child: Container(
+                    height: 400, // Adjust the height as needed
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: AssetImage('images/amphy1.jpg'),
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              // Right images
+              SizedBox(
+                height: 20,
+              ),
+              Expanded(
+                child: SizedBox(
+                  height: 400, // Match the height of the left image
+                  child: Column(
+                    children: [
+                      Expanded(
+                        child: Padding(
+                          padding: EdgeInsets.all(10),
+                          child: Container(
+                            decoration: BoxDecoration(
+                              image: DecorationImage(
+                                image: AssetImage('images/amphy.jpg'),
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                      Expanded(
+                        child: Padding(
+                          padding: EdgeInsets.all(10),
+                          child: Container(
+                            decoration: BoxDecoration(
+                              image: DecorationImage(
+                                image: AssetImage('images/centra3.jpg'),
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
         ]),
       ),
     );

@@ -3,17 +3,19 @@
 import 'package:astu/component/roundecplace.dart';
 import 'package:astu/component/roundedcourse.dart';
 import 'package:astu/constants/constant.dart';
-import 'package:astu/maps/central.dart';
-import 'package:astu/maps/dean.dart';
-import 'package:astu/maps/deanoffice.dart';
-import 'package:astu/maps/females.dart';
+import 'package:astu/maps/central1.dart';
+
+import 'package:astu/maps/deanoffice1.dart';
+import 'package:astu/maps/dormitry.dart';
+
 import 'package:astu/maps/femaleslibraries.dart';
+import 'package:astu/maps/freshmanclas1.dart';
 import 'package:astu/maps/freshmanclass,%5D.dart';
-import 'package:astu/maps/launge&amphy.dart';
+
 import 'package:astu/maps/launge.dart';
 import 'package:astu/maps/libraris.dart';
 import 'package:astu/maps/clinics.dart';
-import 'package:astu/maps/cafe.dart';
+
 import 'package:flutter/material.dart';
 
 class Place extends StatelessWidget {
@@ -77,7 +79,7 @@ class Place extends StatelessWidget {
                 height: 10,
               ),
               RoundedPlace(
-                  name: "Libraries",
+                  name: "Central Library",
                   onpress: () {
                     Navigator.pushNamed(context, Central1.id);
                   }),
@@ -87,19 +89,23 @@ class Place extends StatelessWidget {
               RoundedPlace(
                   name: "Dean Office",
                   onpress: () {
-                    Navigator.pushNamed(context, DeanOffice1.id);
+                    Navigator.pushNamed(context, Deanoffice1.id);
                   }),
               Divider(
                 height: 10,
               ),
-              RoundedPlace(name: "FreshMan Dorm", onpress: () {}),
+              RoundedPlace(
+                  name: "Dormitory",
+                  onpress: () {
+                    Navigator.pushNamed(context, Dorm1.id);
+                  }),
               Divider(
                 height: 10,
               ),
               RoundedPlace(
                   name: "Females Library",
                   onpress: () {
-                    Navigator.pushNamed(context, Femaleslibraries1.id);
+                    Navigator.pushNamed(context, Females1.id);
                   }),
               Divider(
                 height: 10,
@@ -112,30 +118,14 @@ class Place extends StatelessWidget {
               Divider(
                 height: 10,
               ),
-              RoundedPlace(
-                  name: "Cafe",
-                  onpress: () {
-                    Navigator.pushNamed(context, Cafe.id);
-                  }),
               Divider(
                 height: 10,
               ),
               RoundedPlace(
                   name: "Freshman Class",
                   onpress: () {
-                    Navigator.pushNamed(context, Freshmanclass.id);
+                    Navigator.pushNamed(context, Freshmanclas1.id);
                   }),
-              Divider(
-                height: 10,
-              ),
-              RoundedPlace(name: "Student Preziendent Office", onpress: () {}),
-              Divider(
-                height: 10,
-              ),
-              RoundedPlace(name: "Book Store", onpress: () {}),
-              Divider(
-                height: 10,
-              ),
             ],
           ),
         ),

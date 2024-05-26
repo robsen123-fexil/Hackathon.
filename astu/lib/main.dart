@@ -28,17 +28,20 @@ import 'package:astu/curriculum/mechanical/materail.dart';
 import 'package:astu/curriculum/mechanical/mechanical.dart';
 import 'package:astu/curriculum/power.dart';
 import 'package:astu/curriculum/software.dart';
-import 'package:astu/maps/central.dart';
-import 'package:astu/maps/deanoffice.dart';
+import 'package:astu/maps/central1.dart';
+import 'package:astu/maps/deanoffice1.dart';
+import 'package:astu/maps/dormitry.dart';
+import 'package:astu/maps/femaleslibraries.dart';
+import 'package:astu/maps/freshmanclas1.dart';
 import 'package:astu/maps/freshmanclass,%5D.dart';
-import 'package:astu/maps/launge&amphy.dart';
+
 import 'package:astu/maps/launge.dart';
 import 'package:astu/maps/stadium.dart';
-import 'package:astu/maps/females.dart';
+
 import 'package:astu/maps/libraris.dart';
 import 'package:astu/maps/clinics.dart';
-import 'package:astu/maps/dean.dart';
-import 'package:astu/maps/cafe.dart';
+
+
 import 'package:astu/screens/calendar.dart';
 import 'package:astu/screens/feature.dart';
 import 'package:astu/screens/landings.dart';
@@ -112,7 +115,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: isDatabaseEmpty ? InsertScreen.id : DiscoveryPage.id,
+      initialRoute: isDatabaseEmpty ? InsertScreen.id : LandingPage.id,
       routes: {
         InsertScreen.id: (context) => InsertScreen(),
         DiscoveryPage.id: (context) => DiscoveryPage(),
@@ -123,7 +126,7 @@ class MyApp extends StatelessWidget {
         SchoolList.id: (context) => SchoolList(),
         Applied.id: (context) => Applied(),
         GradeInputForm.id: (context) => GradeInputForm(),
-        Cumulative.id: (context) => Cumulative(),
+        CumulativeCgpaCalculator.id: (context) => CumulativeCgpaCalculator(),
         Clubs.id: (context) => Clubs(),
         MealSchedule.id: (context) => MealSchedule(),
         Courses.id: (context) => Courses(),
@@ -158,23 +161,22 @@ class MyApp extends StatelessWidget {
         Eic.id: (context) => Eic(),
         Amc.id: (context) => Amc(),
         Mini.id: (context) => Mini(),
-       
-        Females.id: (context) => Females(),
-        Cafe.id: (context) => Cafe(),
-        DeanOffice.id: (context) => DeanOffice(),
+        
         Physics.id:(context)=>Physics(),
         Chemistry.id:(context)=>Chemistry(),
         Computing.id:(context)=>Computing(),
         Logic.id:(context)=>Logic(),
         AppliedmathsIII.id:(context)=>AppliedmathsIII(),
         Stadium.id:(context)=>Stadium(),
-        Females.id:(context)=>Females(),
-        Amphy.id:(context)=>Amphy(),
+       
         Calendar.id:(context)=>Calendar(),
-        DeanOffice1.id:(context)=>DeanOffice1(),
-        Central1.id:(context)=>Central1(),
         Launge1.id:(context)=>Launge1(),
-        Freshmanclass.id:(context)=>Freshmanclass()
+        Central1.id:(context)=>Central1(),
+        Freshmanclass.id:(context)=>Freshmanclass(),
+        Deanoffice1.id:(context)=>Deanoffice1(),
+        Freshmanclas1.id:(context)=>Freshmanclas1(),
+        Females1.id:(context)=>Females1(),
+        Dorm1.id:(context)=>Dorm1()
         
       },
     );

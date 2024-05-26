@@ -31,7 +31,7 @@ class RoundedPlace extends StatelessWidget {
               name,
               style: TextStyle(
                 
-                fontSize: 20,
+                fontSize: 17,
                 color: Colors.black,
               ),
             ),
