@@ -1,10 +1,7 @@
-// ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors
-
-import 'dart:math';
+// ignore_for_file: prefer_const_constructors
 
 import 'package:astu/constants/constant.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class Cumulative extends StatefulWidget {
   static String id = 'cumulative';
@@ -22,12 +19,12 @@ class _CumulativeState extends State<Cumulative> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-     
       body: SingleChildScrollView(
-
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
+            // Your existing code for the UI
+            SizedBox(height: 16.0),
             Container(
               padding: EdgeInsets.all(20),
               height: 250,
@@ -71,11 +68,10 @@ class _CumulativeState extends State<Cumulative> {
                 ],
               ),
             ),
-            SizedBox(height: 16.0),
             Padding(
               padding: EdgeInsets.all(10),
-              child: Column(
-                children: [TextField(
+              child: Column(children: [
+                TextField(
                   controller: gradeController,
                   decoration: InputDecoration(labelText: 'Grade'),
                   keyboardType: TextInputType.numberWithOptions(decimal: true),
@@ -85,21 +81,17 @@ class _CumulativeState extends State<Cumulative> {
                   decoration: InputDecoration(labelText: 'Credit Hours'),
                   keyboardType: TextInputType.number,
                 ),
-                
-          ]),
+              ]),
             ),
-            
-           
             SizedBox(height: 20),
-            Column(
-              children: [
-                Text('Grades: $grades'),
-                 Text('Credit Hours: $creditHours'),
-                ]),
-           
+            Column(children: [
+              Text('Grades: $grades'),
+              Text('Credit Hours: $creditHours'),
+            ]),
             SizedBox(height: 40),
             ElevatedButton(
               onPressed: () {
+                addGradeAndCreditHour(); // Call the function before calculating CGPA
                 double cgpa = calculateCGPA();
                 showDialog(
                   context: context,
@@ -120,7 +112,10 @@ class _CumulativeState extends State<Cumulative> {
                   },
                 );
               },
-              child: Text('Calculate CGPA' , style: TextStyle(color: Colors.black , fontSize: 20),),
+              child: Text(
+                'Calculate CGPA',
+                style: TextStyle(color: Colors.black, fontSize: 20),
+              ),
             ),
           ],
         ),
