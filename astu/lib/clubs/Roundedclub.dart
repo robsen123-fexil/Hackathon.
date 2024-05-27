@@ -40,7 +40,7 @@ class RoundedClub extends StatelessWidget {
               decoration: BoxDecoration(
                 image: DecorationImage(image: AssetImage(image)),
                 borderRadius:
-                    BorderRadius.circular(75), // Half of the height/width
+                    BorderRadius.circular(75), 
               ),
             ),
             SizedBox(height: 20),
@@ -101,11 +101,10 @@ class RoundedClub extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox()
+           
           ],
         ),
       ),
     );
   }
 }
-//  "Introducing CSEC (Computer Science and Engineering Club), your gateway to the world of technology, development, competition, and problem-solving. CSEC is dedicated to fostering a vibrant community of tech enthusiasts who are passionate about advancing their skills in software development, participating in competitive programming, and tackling real-world problems with innovative solutions.",

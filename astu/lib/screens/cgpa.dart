@@ -8,12 +8,12 @@ import 'package:astu/screens/gpa.dart';
 
 // Define the Subject class
 class Subject {
-  final String grade;
-  final double points;
-  final int creditHours;
+  final String grade;  // grade are A , A+ , ....
+  final double points; // points 2.5 , 4, , 3.75
+  final int creditHours;  // summation of total point
 
   Subject({
-    required this.grade,
+    required this.grade,   // this one is neccesary because when we try to add a new subject we dont have to initailized string  double or int just by mentioning Subject we can pass the value. 
     required this.points,
     required this.creditHours,
   });
@@ -30,18 +30,20 @@ class GradeInputForm extends StatefulWidget {
 
 class _GradeInputFormState extends State<GradeInputForm> {
   // Initialize a list of Subject objects
-  final List<Subject> subjects = [];
-  final _formKey = GlobalKey<FormState>();
+  final List<Subject> subjects = [];  // in here im initailezed impty list to store subject i have added
+
+  final _formKey = GlobalKey<FormState>(); // in here the idea is to validate and gives creating a unique ley form for the forms
+
 
   String _selectedGrade = 'A';
   int _creditHours = 1;
 
   final Map<String, double> _gradePoints = {
     'A+': 4.0,
-    'A': 4.0,
+    'A': 4.0, 
     'A-': 3.75,
     'B+': 3.5,
-    'B': 3.0,
+    'B': 3.0,   // in here i have to assocaite every grade with its qwith its credit hour 
     'B-': 2.75,
     'C+': 2.5,
     'C': 2.0,
@@ -52,9 +54,9 @@ class _GradeInputFormState extends State<GradeInputForm> {
 
   // Add a method to add a new Subject to the list
   void _addSubject() {
-    if (_formKey.currentState!.validate()) {
+    if (_formKey.currentState!.validate()) { // this one is used to validate the inputs is it is good it add to subjects list
       _formKey.currentState!.save();
-      setState(() {
+      setState(() {    // as usual set state  is used to update ui reflet the changes suddenly
         subjects.add(Subject(
           grade: _selectedGrade,
           points: _gradePoints[_selectedGrade]!,
@@ -114,6 +116,7 @@ class _GradeInputFormState extends State<GradeInputForm> {
 
   void _onItemTapped(int index) {
     if (index == 0) {
+
     } else if (index == 1) {
       getCgpa();
     }
@@ -164,7 +167,7 @@ class _GradeInputFormState extends State<GradeInputForm> {
                       icon: Icon(Icons.arrow_back, color: Colors.white),
                     ),
                     SizedBox(height: 50),
-                    Text("GPA & CGPA",
+                    Text("GPA ",
                         style: boldtext.copyWith(color: Colors.white)),
                   ],
                 ),

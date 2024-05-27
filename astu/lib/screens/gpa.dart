@@ -133,7 +133,7 @@ class _CumulativeCgpaCalculatorState extends State<CumulativeCgpaCalculator> {
             ),
             SizedBox(height: 20.0),
             TextButton(
-              style: ElevatedButton.styleFrom(
+              style: TextButton.styleFrom(
                 backgroundColor: Color.fromARGB(255, 130, 129, 133),
               ),
               onPressed: () {
@@ -169,7 +169,8 @@ class _CumulativeCgpaCalculatorState extends State<CumulativeCgpaCalculator> {
               },
               child: Text(
                 'Calculate CGPA',
-                style: TextStyle(color: Colors.black),
+                style: TextStyle(color: Color.fromARGB(255, 130, 129, 133),
+                ),
               ),
             ),
             SizedBox(height: 20.0),

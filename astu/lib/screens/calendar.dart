@@ -166,7 +166,7 @@ class ExpandableItem extends StatelessWidget {
             child: Text(
               content,
               style: TextStyle(fontSize: 18 , ),
-              textAlign: TextAlign.left, // Align content text to the left
+              textAlign: TextAlign.left,
             ),
           ),
         ),

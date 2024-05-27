@@ -13,6 +13,7 @@ class LandingPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        backgroundColor: Color.fromARGB(255, 249, 248, 248),
         body: Column(
           children: [
             Expanded(
@@ -58,9 +59,8 @@ class LandingPage extends StatelessWidget {
               effect: WormEffect(
                 dotHeight: 8.0,
                 dotWidth: 8.0,
-                activeDotColor: Color.fromARGB(
-                    255, 2, 57, 255), // Changed the active dot color
-                dotColor: Color.fromARGB(255, 247, 133, 133),
+                activeDotColor: Color.fromARGB(255, 62, 96, 219), // Changed the active dot color
+                dotColor: Color.fromARGB(255, 251, 90, 90),
               ),
             ),
             SizedBox(height: 20),

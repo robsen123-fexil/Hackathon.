@@ -10,7 +10,6 @@ class ExpandableItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ExpansionTile(
-    
       backgroundColor: Colors.grey,
       title: Text(
         title,
