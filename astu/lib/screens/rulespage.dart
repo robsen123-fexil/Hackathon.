@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
+import 'package:astu/component/roundedcontainer.dart';
 import 'package:flutter/material.dart';
 import 'package:astu/constants/constant.dart';
 import 'package:astu/component/expansionitem.dart';
@@ -24,57 +25,16 @@ class _RulespageState extends State<Rulespage> {
 
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Container(
-              padding: EdgeInsets.all(20),
-              height: 250,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.grey.withOpacity(0.5),
-                    spreadRadius: 9,
-                    blurRadius: 9,
-                    offset: Offset(0, 3), // changes position of shadow
-                  ),
-                ],
-                borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(30),
-                  bottomRight: Radius.circular(15),
-                ),
-                image: DecorationImage(
-                  image: AssetImage("images/landing.jpg"),
-                  fit: BoxFit.cover,
-                ),
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  SizedBox(height: 30),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      IconButton(
-                        onPressed: () {
-                          Navigator.pop(context);
-                        },
-                        icon: Icon(Icons.arrow_back, color: Colors.white),
-                      ),
-                      SizedBox(height: 50),
-                      Text("Policies & Procedures",
-                          style: boldtext.copyWith(color: Colors.white)),
-                    ],
-                  ),
-                ],
-              ),
-            ),
-            
-            
+            RoundedContainer(title: "Policies & Procedure", ontap: (){
+              Navigator.pop(context);
+            }),
             ListView(
               shrinkWrap: true,
               physics: NeverScrollableScrollPhysics(),
               children: [
                 ExpandableItem(
-                  title: "Drug and Alcohol Use Policy",
+                  
+                  title: "Drug and Alcohol Use Policy" ,
                   content:
                       "Use, possession, or distribution of illegal drugs on campus is strictly prohibited. Underage drinking is not allowed, and alcohol consumption for those of legal age is restricted to designated areas. Misuse or sharing of prescription drugs is banned. Public intoxication is forbidden. Any student caught violating these rules will face immediate expulsion from campus.",
                 ),

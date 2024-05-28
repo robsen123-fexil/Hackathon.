@@ -29,7 +29,7 @@ class Chemicalabout extends StatelessWidget {
             Padding(
                 padding: EdgeInsets.all(20),
                 child: Text(
-                  "About",
+                  "Curriculum",
                   style: boldtext,
                 ))
           ]),

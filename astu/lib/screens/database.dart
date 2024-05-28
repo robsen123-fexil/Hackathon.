@@ -1,7 +1,15 @@
+// ignore_for_file: depend_on_referenced_packages
+
 import 'package:sqflite/sqflite.dart';
+// sqlflite is used when ever there is offline too . so it doesnt need online for signing app.
+ // used to local storage allow database operation.
 import 'package:path/path.dart';
 
 class DatabaseHelper {
+
+  // _Instance is private static variable of type DATABASEHELPER THAT HOLDS SINGLE INSTANCE OF CLASS IT ENSURES THAT ONLY ONE INSTANCE OF DATABASEHELPER IS CREATED THROUGH THE APP
+
+  // THIS ONE ENSURE THAT ONLY SINGLE ONE ISTANCE IS CREATED THROUGHT THE APP BUILDING .
   static final DatabaseHelper _instance = DatabaseHelper._internal();
   static Database? _database;
 

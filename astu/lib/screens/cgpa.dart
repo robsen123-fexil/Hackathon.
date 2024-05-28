@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors, sort_child_properties_last, prefer_final_fields
 
+import 'package:astu/component/roundedcontainer.dart';
 import 'package:astu/constants/constant.dart';
 import 'package:astu/screens/discover.dart';
 import 'package:flutter/material.dart';
@@ -8,12 +9,12 @@ import 'package:astu/screens/gpa.dart';
 
 // Define the Subject class
 class Subject {
-  final String grade;  // grade are A , A+ , ....
+  final String grade; // grade are A , A+ , ....
   final double points; // points 2.5 , 4, , 3.75
-  final int creditHours;  // summation of total point
+  final int creditHours; // summation of total point
 
   Subject({
-    required this.grade,   // this one is neccesary because when we try to add a new subject we dont have to initailized string  double or int just by mentioning Subject we can pass the value. 
+    required this.grade, // this one is neccesary because when we try to add a new subject we dont have to initailized string  double or int just by mentioning Subject we can pass the value.
     required this.points,
     required this.creditHours,
   });
@@ -30,20 +31,22 @@ class GradeInputForm extends StatefulWidget {
 
 class _GradeInputFormState extends State<GradeInputForm> {
   // Initialize a list of Subject objects
-  final List<Subject> subjects = [];  // in here im initailezed impty list to store subject i have added
+  final List<Subject> subjects =
+      []; // in here im initailezed impty list to store subject i have added
 
-  final _formKey = GlobalKey<FormState>(); // in here the idea is to validate and gives creating a unique ley form for the forms
-
+  final _formKey = GlobalKey<
+      FormState>(); // in here the idea is to validate and gives creating a unique ley form for the forms
 
   String _selectedGrade = 'A';
   int _creditHours = 1;
 
   final Map<String, double> _gradePoints = {
     'A+': 4.0,
-    'A': 4.0, 
+    'A': 4.0,
     'A-': 3.75,
     'B+': 3.5,
-    'B': 3.0,   // in here i have to assocaite every grade with its qwith its credit hour 
+    'B':
+        3.0, // in here i have to assocaite every grade with its qwith its credit hour
     'B-': 2.75,
     'C+': 2.5,
     'C': 2.0,
@@ -54,9 +57,11 @@ class _GradeInputFormState extends State<GradeInputForm> {
 
   // Add a method to add a new Subject to the list
   void _addSubject() {
-    if (_formKey.currentState!.validate()) { // this one is used to validate the inputs is it is good it add to subjects list
+    if (_formKey.currentState!.validate()) {
+      // this one is used to validate the inputs is it is good it add to subjects list
       _formKey.currentState!.save();
-      setState(() {    // as usual set state  is used to update ui reflet the changes suddenly
+      setState(() {
+        // as usual set state  is used to update ui reflet the changes suddenly
         subjects.add(Subject(
           grade: _selectedGrade,
           points: _gradePoints[_selectedGrade]!,
@@ -116,7 +121,6 @@ class _GradeInputFormState extends State<GradeInputForm> {
 
   void _onItemTapped(int index) {
     if (index == 0) {
-
     } else if (index == 1) {
       getCgpa();
     }
@@ -131,48 +135,11 @@ class _GradeInputFormState extends State<GradeInputForm> {
       backgroundColor: Colors.white,
       body: Column(
         children: [
-          Container(
-            padding: EdgeInsets.all(20),
-            height: 250,
-            width: double.infinity,
-            decoration: BoxDecoration(
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.grey.withOpacity(0.5),
-                  spreadRadius: 9,
-                  blurRadius: 9,
-                  offset: Offset(0, 3), // changes position of shadow
-                ),
-              ],
-              borderRadius: BorderRadius.only(
-                bottomLeft: Radius.circular(30),
-                bottomRight: Radius.circular(15),
-              ),
-              image: DecorationImage(
-                image: AssetImage("images/landing.jpg"),
-                fit: BoxFit.cover,
-              ),
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                SizedBox(height: 30),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    IconButton(
-                      onPressed: () {
-                        Navigator.pop(context);
-                      },
-                      icon: Icon(Icons.arrow_back, color: Colors.white),
-                    ),
-                    SizedBox(height: 50),
-                    Text("GPA ",
-                        style: boldtext.copyWith(color: Colors.white)),
-                  ],
-                ),
-              ],
-            ),
+          RoundedContainer(
+            title: "GPA",
+            ontap: () {
+              Navigator.pop(context);
+            },
           ),
           SizedBox(
             height: 40,
@@ -214,8 +181,8 @@ class _GradeInputFormState extends State<GradeInputForm> {
                         if (value == null || value.isEmpty) {
                           return 'Please enter credit hours';
                         }
-                        final n = int.tryParse(value);
-                        if (n == null || n <= 0) {
+                        final negative = int.tryParse(value);
+                        if (negative == null || negative <= 0) {
                           return 'Please enter a valid number';
                         }
                         return null;
@@ -236,7 +203,6 @@ class _GradeInputFormState extends State<GradeInputForm> {
                           ),
                         ),
                         SizedBox(width: 10),
-                        
                         ElevatedButton(
                           onPressed: _clearAll,
                           child: Text(

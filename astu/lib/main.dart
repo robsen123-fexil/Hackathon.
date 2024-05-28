@@ -28,24 +28,32 @@ import 'package:astu/curriculum/mechanical/materail.dart';
 import 'package:astu/curriculum/mechanical/mechanical.dart';
 import 'package:astu/curriculum/power.dart';
 import 'package:astu/curriculum/software.dart';
+import 'package:astu/maps/cafe1.dart';
 import 'package:astu/maps/central1.dart';
 import 'package:astu/maps/deanoffice1.dart';
 import 'package:astu/maps/dormitry.dart';
+import 'package:astu/maps/electricalbuilding.dart';
 import 'package:astu/maps/femaleslibraries.dart';
 import 'package:astu/maps/freshmanclas1.dart';
 import 'package:astu/maps/freshmanclass,%5D.dart';
 
 import 'package:astu/maps/launge.dart';
+import 'package:astu/maps/mechancicalbuilding.dart';
 import 'package:astu/maps/stadium.dart';
 
 import 'package:astu/maps/libraris.dart';
 import 'package:astu/maps/clinics.dart';
+import 'package:astu/offcampus/akukulubot.dart';
+import 'package:astu/offcampus/barch.dart';
+import 'package:astu/offcampus/shefmarta.dart';
 
 
 import 'package:astu/screens/calendar.dart';
 import 'package:astu/screens/feature.dart';
 import 'package:astu/screens/landings.dart';
 import 'package:astu/screens/mapscreen.dart';
+import 'package:astu/offcampus/shefmami.dart';
+import 'package:astu/screens/offcampuslist.dart';
 import 'package:astu/screens/phone.dart';
 import 'package:astu/screens/place.dart';
 import 'package:astu/screens/schedule.dart';
@@ -143,7 +151,7 @@ class MyApp extends StatelessWidget {
         AntiDrug.id: (context) => AntiDrug(),
         Space.id: (context) => Space(),
         Place.id: (context) => Place(),
-        Schedule.id: (context) => Schedule(),
+        
         Rulespage.id: (context) => Rulespage(),
         Mechanicalabout.id: (context) => Mechanicalabout(),
         Materialabout.id: (context) => Materialabout(),
@@ -166,7 +174,7 @@ class MyApp extends StatelessWidget {
         Computing.id:(context)=>Computing(),
         Logic.id:(context)=>Logic(),
         AppliedmathsIII.id:(context)=>AppliedmathsIII(),
-        Stadium.id:(context)=>Stadium(),
+        Staduim.id:(context)=>Staduim(),
        
         Calendar.id:(context)=>Calendar(),
         Launge1.id:(context)=>Launge1(),
@@ -175,7 +183,17 @@ class MyApp extends StatelessWidget {
         Deanoffice1.id:(context)=>Deanoffice1(),
         Freshmanclas1.id:(context)=>Freshmanclas1(),
         Females1.id:(context)=>Females1(),
-        Dorm1.id:(context)=>Dorm1()
+        Dorm1.id:(context)=>Dorm1() ,
+        ElecBuilding1.id:(context)=>ElecBuilding1(),
+        MechBuilding1.id:(context)=>MechBuilding1(),
+        CafeBuilding1.id:(context)=>CafeBuilding1(),
+        OffcampusMenu.id:(context)=> OffcampusMenu(),
+        Offcampuslist.id:(context)=>Offcampuslist() ,
+        Barch.id:(context)=>Barch(), 
+        ShefMarta.id:(context)=>ShefMarta() ,
+        Akukulubot.id:(context)=>Akukulubot()
+
+
         
       },
     );

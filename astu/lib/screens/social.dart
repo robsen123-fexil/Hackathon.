@@ -1,11 +1,11 @@
-import 'package:flutter/material.dart';
+// import 'package:flutter/material.dart';
 
-class Social extends StatelessWidget {
-  const Social({super.key});
+// class Social extends StatelessWidget {
+//   const Social({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return const Placeholder();
-  }
-}
+//   @override
+//   Widget build(BuildContext context) {
+//     return const Placeholder();
+//   }
+// }
 

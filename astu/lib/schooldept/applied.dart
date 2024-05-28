@@ -43,11 +43,13 @@ class Applied extends StatelessWidget {
               Divider(
                 height: 10,
               ),
-              Padding(
-                padding: EdgeInsets.all(20),
-                child: Text(
-                  "The department of Mechanical engineering offers B.sc and M.sc. program in mechanical engineering. The department has a strong research focus with research areas including: design, manufacturing, material, thermal science, fluid mechanics, robotics and control systems.",
-                  style: TextStyle(fontSize: 17),
+              SingleChildScrollView(
+                child: Padding(
+                  padding: EdgeInsets.all(20),
+                  child: Text(
+                    "The department of Pre Science offers B.sc and M.sc. program in Applied Program. The department has a strong research focus with research areas including: , manufacturing, Discovering new, Geology, Food Processing, Medice and Eco System.",
+                    style: TextStyle(fontSize: 17),
+                  ),
                 ),
               ),
               Row(

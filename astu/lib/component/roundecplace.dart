@@ -15,7 +15,7 @@ class RoundedPlace extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.all(10),
-      height: 70,
+      height: 50,
       decoration: BoxDecoration(
         color: Color.fromARGB(255, 251, 248, 248),
         borderRadius: BorderRadius.circular(10),
@@ -32,7 +32,8 @@ class RoundedPlace extends StatelessWidget {
               style: TextStyle(
                 
                 fontSize: 17,
-                color: Colors.black,
+                color: Colors.black
+                
               ),
             ),
           ],

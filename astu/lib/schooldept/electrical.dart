@@ -47,11 +47,13 @@ class Electrical extends StatelessWidget {
                     ),
                   ),
                   Divider(height: 10),
-                  Padding(
-                    padding: EdgeInsets.all(20),
-                    child: Text(
-                      "The department of Mechanical engineering offers B.sc and M.sc. program in mechanical engineering. The department has a strong research focus with research areas including: design, manufacturing, material, thermal science, fluid mechanics, robotics and control systems.",
-                      style: TextStyle(fontSize: 17),
+                  SingleChildScrollView(
+                    child: Padding(
+                      padding: EdgeInsets.all(20),
+                      child: Text(
+                        "The department of Electrical  engineering offers B.sc and M.sc. program in Electrical engineering. The department has a strong research focus with research areas including: Solving Problem, Real world Program, material, thermal science,  robotics and control systems.",
+                        style: TextStyle(fontSize: 17),
+                      ),
                     ),
                   ),
                   Padding(

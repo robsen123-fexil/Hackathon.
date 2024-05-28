@@ -10,10 +10,11 @@ class ExpandableItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ExpansionTile(
-      backgroundColor: Colors.grey,
+      leading: Icon(Icons.rule),
+      backgroundColor: const Color.fromARGB(255, 206, 200, 200),
       title: Text(
         title,
-        style: TextStyle(fontSize: 18,),
+        style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold ),
       ),
       children: [
         Padding(

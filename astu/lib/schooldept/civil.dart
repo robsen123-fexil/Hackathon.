@@ -45,11 +45,13 @@ class Civil extends StatelessWidget {
                 Divider(
                   height: 10,
                 ),
-                Padding(
-                  padding: EdgeInsets.all(20),
-                  child: Text(
-                    "The department of Mechanical engineering offers B.sc and M.sc. program in mechanical engineering. The department has a strong research focus with research areas including: design, manufacturing, material, thermal science, fluid mechanics, robotics and control systems.",
-                    style: TextStyle(fontSize: 17),
+                SingleChildScrollView(
+                  child: Padding(
+                    padding: EdgeInsets.all(20),
+                    child: Text(
+                      "The department of Civil engineering offers B.sc and M.sc. program in mechanical engineering. The department has a strong research focus with research areas including: Construction, manufacturing, material, Architectural, fluid mechanics, robotics and control systems.",
+                      style: TextStyle(fontSize: 17),
+                    ),
                   ),
                 ),
                 Row(

@@ -83,7 +83,7 @@ class _DiscoveryPageState extends State<DiscoveryPage> with SingleTickerProvider
       return 'Good Morning';
     } else if (hour >= 12 && hour <= 17) {
       return 'Good Afternoon';
-    } else if (hour >= 17 && hour < 21) {
+    } else if (hour >= 17 && hour < 24) {
       return 'Good Evening';
     } else {
       return 'Good Night';
@@ -238,9 +238,7 @@ class _DiscoveryPageState extends State<DiscoveryPage> with SingleTickerProvider
                         },
                       ),
                     ),
-                    SizedBox(
-                      width: 10,
-                    ),
+                  
                   ],
                 ),
                 SizedBox(
@@ -362,7 +360,11 @@ class _DiscoveryPageState extends State<DiscoveryPage> with SingleTickerProvider
                     ),
                     
                   ],
+                ),
+                SizedBox(
+                  height: 30,
                 )
+                
                 
                
               ],

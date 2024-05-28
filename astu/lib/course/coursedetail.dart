@@ -107,7 +107,9 @@ class Coursedetail extends StatelessWidget {
                 padding: EdgeInsets.symmetric(vertical: 12.0, horizontal: 24.0),
                 textStyle: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
               ),
+              // canlaunch have differnt schema those http:$url  , tel:$url , sms:$url , mailto$url , 
               onPressed: () async {
+
                 const url =
                     'https://drive.google.com/drive/folders/1YUPBclCL9UPQnS3pQaGKq5smSk0CFj67?usp=drive_link';
                 if (await canLaunch(url)) {

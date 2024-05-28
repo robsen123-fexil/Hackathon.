@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors, use_key_in_widget_constructors
 
+import 'package:astu/component/roundedcontainer.dart';
 import 'package:astu/constants/constant.dart';
 import 'package:flutter/material.dart';
 
@@ -30,49 +31,9 @@ class _CumulativeCgpaCalculatorState extends State<CumulativeCgpaCalculator> {
           
           
           children: <Widget>[
-            Container(
-              padding: EdgeInsets.all(20),
-              height: 250,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.grey.withOpacity(0.5),
-                    spreadRadius: 9,
-                    blurRadius: 9,
-                    offset: Offset(0, 3), // changes position of shadow
-                  ),
-                ],
-                borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(30),
-                  bottomRight: Radius.circular(15),
-                ),
-                image: DecorationImage(
-                  image: AssetImage("images/landing.jpg"),
-                  fit: BoxFit.cover,
-                ),
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  SizedBox(height: 30),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      IconButton(
-                        onPressed: () {
-                          Navigator.pop(context);
-                        },
-                        icon: Icon(Icons.arrow_back, color: Colors.white),
-                      ),
-                      SizedBox(height: 50),
-                      Text("GPA & CGPA",
-                          style: boldtext.copyWith(color: Colors.white)),
-                    ],
-                  ),
-                ],
-              ),
-            ),
+            RoundedContainer(title: "CGPA", ontap: (){
+              Navigator.pop(context);
+            }),
             Padding(
               padding: EdgeInsets.all(20),
               child: Text(
@@ -82,6 +43,7 @@ class _CumulativeCgpaCalculatorState extends State<CumulativeCgpaCalculator> {
             ),
             SizedBox(height: 20.0),
             Expanded(
+              // the reason i used ListView.builder is that we can make unlimited time of DYNAMIC widget of input field for each gpa and credit hour
               child: ListView.builder(
                 itemCount: prevGpas.length + 1,
                 itemBuilder: (context, index) {
@@ -105,6 +67,7 @@ class _CumulativeCgpaCalculatorState extends State<CumulativeCgpaCalculator> {
                   }
                   return Row(
                     children: <Widget>[
+                      // Flexibale is used when we want to ensure the textfiled takes appropreiate amount of space 
                       Flexible(
                         child: TextField(
                           keyboardType: TextInputType.number,

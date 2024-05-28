@@ -5,8 +5,8 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
-class Central1 extends StatelessWidget {
-  static String id = 'central';
+class MechBuilding1 extends StatelessWidget {
+  static String id = 'mechbuilding';
 
   @override
   Widget build(BuildContext context) {
@@ -21,9 +21,7 @@ class Central1 extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(children: [
           GestureDetector(
-            onTap: () {
-              
-            },
+            onTap: () {},
             child: Container(
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.only(
@@ -44,7 +42,7 @@ class Central1 extends StatelessWidget {
             Padding(
               padding: EdgeInsets.all(10),
               child: Text(
-                "Central Library",
+                "School of Mechanical",
                 style: TextStyle(
                   fontSize: 30,
                 ),
@@ -56,7 +54,7 @@ class Central1 extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.all(10),
                 child: Text(
-                  "BLOCK 107",
+                  "BLOCK 610",
                   style: TextStyle(fontSize: 20),
                 ),
               )
@@ -68,7 +66,7 @@ class Central1 extends StatelessWidget {
               borderRadius:
                   BorderRadius.circular(10), // optional, for rounded corners
               image: DecorationImage(
-                image: AssetImage('images/centralpath.png'),
+                image: AssetImage('images/mechanicalpath.png'),
                 fit: BoxFit
                     .cover, // This ensures the image covers the entire container
               ),
@@ -84,7 +82,7 @@ class Central1 extends StatelessWidget {
                     height: 400, // Adjust the height as needed
                     decoration: BoxDecoration(
                       image: DecorationImage(
-                        image: AssetImage('images/central.jpg'),
+                        image: AssetImage('images/mechanicalbuilding.jpg'),
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -92,44 +90,7 @@ class Central1 extends StatelessWidget {
                 ),
               ),
               // Right images
-              SizedBox(
-                height: 20,
-              ),
-              Expanded(
-                child: SizedBox(
-                  height: 400, // Match the height of the left image
-                  child: Column(
-                    children: [
-                      Expanded(
-                        child: Padding(
-                          padding: EdgeInsets.all(10),
-                          child: Container(
-                            decoration: BoxDecoration(
-                              image: DecorationImage(
-                                image: AssetImage('images/central.jpg'),
-                                fit: BoxFit.cover,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                      Expanded(
-                        child: Padding(
-                          padding: EdgeInsets.all(10),
-                          child: Container(
-                            decoration: BoxDecoration(
-                              image: DecorationImage(
-                                image: AssetImage('images/central.jpg'),
-                                fit: BoxFit.cover,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
+            
             ],
           ),
         ]),
@@ -145,7 +106,6 @@ class MapSample extends StatefulWidget {
 
 class _MapSampleState extends State<MapSample> {
   late GoogleMapController mapController;
-  
 
   final LatLng _center = const LatLng(8.564522983218845, 39.291745711361244);
 
@@ -165,7 +125,6 @@ class _MapSampleState extends State<MapSample> {
   Widget build(BuildContext context) {
     // after cafe chnage the map starting point to astu gateway.
     return GoogleMap(
-      
       onMapCreated: _onMapCreated,
       initialCameraPosition: CameraPosition(
         target: _center,

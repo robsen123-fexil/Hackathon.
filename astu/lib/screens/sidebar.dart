@@ -2,6 +2,7 @@
 
 import 'package:astu/screens/calendar.dart';
 import 'package:astu/screens/cgpa.dart';
+import 'package:astu/screens/offcampuslist.dart';
 import 'package:astu/screens/phone.dart';
 import 'package:astu/screens/rulespage.dart';
 import 'package:astu/screens/schoollist.dart';
@@ -71,7 +72,7 @@ class Sidebar extends StatelessWidget {
             ),
            
             ListTile(
-              leading: Icon(Icons.calculate),
+              leading: Icon(Icons.rule),
               title: Text(
                 'Rules & Regulation',
                 style: TextStyle(fontSize: 18),
@@ -88,6 +89,16 @@ class Sidebar extends StatelessWidget {
               ),
               onTap: () {
                 Navigator.pushNamed(context, Calendar.id);
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.menu_book),
+              title: Text(
+                'Off Campus Menu',
+                style: TextStyle(fontSize: 18),
+              ),
+              onTap: () {
+                Navigator.pushNamed(context, Offcampuslist.id);
               },
             ),
           ],

@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, use_super_parameters
 
 import 'package:flutter/material.dart';
 
@@ -29,25 +29,28 @@ class Feature extends StatelessWidget {
           height: 400,
           width: double.infinity,
         ),
-        Container(
-          color: const Color.fromARGB(255, 255, 255, 255),
-          height: 300,
-          child: Column(
-            children: [
-              Padding(
-                padding: EdgeInsets.all(20),
-                child: Text(
-                  about,
-                  style: TextStyle(fontSize: 20),
+        SingleChildScrollView(
+          child: Container(
+            color: const Color.fromARGB(255, 255, 255, 255),
+            height: 300,
+            child: Column(
+              children: [
+                Padding(
+                  padding: EdgeInsets.all(20),
+                  child: Text(
+                    about,
+                    style: TextStyle(fontSize: 20),
+                  ),
                 ),
-              ),
-              Padding(
-                padding: EdgeInsets.all(20),
-                child: Text(
-                  description,
+                Padding(
+                  padding: EdgeInsets.all(20),
+                  child: Text(
+                    description,
+                    style:TextStyle(fontSize: 17),
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ],

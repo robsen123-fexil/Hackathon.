@@ -21,7 +21,7 @@ class LandingPage extends StatelessWidget {
                 controller: _controller,
                 children: [
                   Feature(
-                    image: 'images/astulanding.jpg',
+                    image: 'images/LOGO.jpg',
                     about: "Adama Science & Technology University",
                     description:
                         "Our mission is to innovate knowledge through dynamic education, foster research and development for societal advancement, and promote sustainable solutions for global challenges at Adama Science and Technology University.",
@@ -30,25 +30,25 @@ class LandingPage extends StatelessWidget {
                     image: 'images/calculator.webp',
                     about: "Calculator",
                     description:
-                        'Introducing our user-friendly grade calculator app, designed to simplify academic life for students. Easily input grades for individual courses, customize grading scales, and calculate both course grades and cumulative GPA with precision. With intuitive features like weighted grading and semester-wise analysis, tracking academic progress has never been easier. Empowering students to plan ahead and stay organized, our app is the ultimate companion for academic success.',
+                        'Introducing our user-friendly grade calculator app, designed to simplify academic life for students. Easily input grades for individual courses, customize grading scales, and calculate both course grades and cumulative GPA.',
                   ),
                   Feature(
                     image: 'images/regulation.jpg',
                     about: "Rules & Regulation",
                     description:
-                        " Introducing our campus rules and regulations app, your go-to tool for navigating campus guidelines with ease. From academic conduct to campus safety protocols, access a comprehensive overview of all rules at your fingertips. Stay informed about policies on attendance, dress code, and academic integrity, ensuring compliance and fostering a respectful learning environment.",
+                        " Introducing our campus rules and regulations app, your go-to tool for navigating campus guidelines with ease. From academic conduct to campus safety protocols, access a comprehensive overview of all rules at your fingertips. ",
                   ),
                   Feature(
                     image: 'images/food.jpg',
                     about: "Meal Schedule",
                     description:
-                        " Introducing our Food Schedule app, your ultimate guide to campus dining options for the weekend. Discover a variety of delicious meals served throughout the weekend, from hearty breakfasts to savory dinners. With our app, you can access the weekend menu for campus cafeterias and dining halls, ensuring you never miss out on your favorite meals. ",
+                        " Introducing our Food Schedule app, your ultimate guide to campus dining options for the weekend. Discover a variety of delicious meals served throughout the weekend, from hearty breakfasts to savory dinners.  ",
                   ),
                   Feature(
                     image: 'images/Phonelist.jpg',
                     about: "Phone Number's",
                     description:
-                        "Introducing our Campus Contacts app, your essential resource for accessing emergency contacts and department heads with ease. Whether you need urgent assistance or simply want to connect with campus services, our app provides quick access to important phone numbers and email addresses. From emergency services to academic departments, find all the contact information you need in one convenient location.",
+                        "Introducing our Campus Contacts app, your essential resource for accessing emergency contacts and department heads with ease. Whether you need urgent assistance or simply want to connect with campus services, our app provides quick access to important phone numbers.",
                   ),
                 ],
               ),

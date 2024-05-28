@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:astu/component/roundedcontainer.dart';
 import 'package:astu/constants/constant.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -15,57 +16,11 @@ class Phone extends StatelessWidget {
         backgroundColor: Colors.white,
         body: Column(
           children: [
-            Container(
-              padding: EdgeInsets.all(20),
-              height: 250,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.grey.withOpacity(0.5),
-                    spreadRadius: 9,
-                    blurRadius: 9,
-                    offset: Offset(0, 3), // changes position of shadow
-                  ),
-                ],
-                borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(30),
-                  bottomRight: Radius.circular(15),
-                ),
-                image: DecorationImage(
-                  image: AssetImage("images/landing.jpg"),
-                  fit: BoxFit.cover,
-                ),
-              ),
-              child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    SizedBox(
-                      height: 30,
-                    ),
-                    Column(
-                     crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Container(
-                            child: IconButton(
-                                onPressed: () {
-                                  Navigator.pop(context);
-                                },
-                                icon: Icon(
-                                  Icons.arrow_back,
-                                  color: Colors.white,
-                                ))),
-                        SizedBox(
-                          height: 50,
-                        ),
-                        Text("Phone",
-                            style: boldtext.copyWith(color: Colors.white))
-                      ],
-                    ),
-                   
-                    
-                  ]),
-            ),
+            RoundedContainer(
+                title: "Phone",
+                ontap: () {
+                  Navigator.pop(context);
+                }),
             SizedBox(
               height: 20,
             ),
@@ -78,12 +33,9 @@ class Phone extends StatelessWidget {
                     no: "+251940046254",
                   ),
                   Divider(
-                    height: 2, 
+                    height: 2,
                     color: Colors.black,
-
-                  
                   ),
-
                   RoundedPhone(
                     name: "Student Police",
                     no: "+251911223344",
@@ -100,7 +52,7 @@ class Phone extends StatelessWidget {
                     height: 2,
                     color: Colors.black,
                   ),
-                   RoundedPhone(
+                  RoundedPhone(
                     name: "Dean Secretary",
                     no: "+251933445566",
                   ),
@@ -108,7 +60,7 @@ class Phone extends StatelessWidget {
                     height: 2,
                     color: Colors.black,
                   ),
-                   RoundedPhone(
+                  RoundedPhone(
                     name: "Dormitory",
                     no: "+251933445566",
                   ),
@@ -156,7 +108,6 @@ class Phone extends StatelessWidget {
                     height: 2,
                     color: Colors.black,
                   ),
-
                 ],
               ),
             ),
@@ -178,34 +129,46 @@ class RoundedPhone extends StatelessWidget {
     return ClipRRect(
       borderRadius: BorderRadius.circular(20),
       child: ExpansionTile(
-        backgroundColor: const Color.fromARGB(255, 255, 255, 255).withOpacity(0.3),
+        backgroundColor:
+            const Color.fromARGB(255, 255, 255, 255).withOpacity(0.3),
         title: Text(
           name,
-          style: TextStyle(fontSize: 18, ),
+          style: TextStyle(
+            fontSize: 18,
+          ),
         ),
         children: [
           Container(
             padding: EdgeInsets.all(16.0),
             child: Column(
               children: [
-                GestureDetector(
-                  onTap: () async {
-                    final url = 'tel:$no';
-                    if (await canLaunchUrl(Uri.parse(url))) {
-                      await launchUrl(Uri.parse(url));
-                    } else {
-                      throw 'Could not launch $url';
-                    }
-                  },
-                  child: Text(
-                    no,
-                    style: TextStyle(
-                        fontSize: 18,
-                        color: Colors.blue,
-                        decoration: TextDecoration.underline),
-                  ),
-                ),
-               
+                // GestureDetector(
+                //   onTap: () async {
+                //     final url = 'tel:$no';
+                //     if (await canLaunchUrl(Uri.parse(url))) {
+                //       await launchUrl(Uri.parse(url));
+                //     } else {
+                //       throw 'Could not launch $url';
+                //     }
+                //   },
+                //   child: Text(
+                //     no,
+                //     style: TextStyle(
+                //         fontSize: 18,
+                //         color: Colors.blue,
+                //         decoration: TextDecoration.underline),
+                //   ),
+                // ),
+                ElevatedButton(
+                    onPressed: () async {
+                      final url = 'tel:$no';
+                      if (await canLaunchUrl(Uri.parse(url))) {
+                        await launchUrl(Uri.parse(url));
+                      } else {
+                        throw 'Could Not Launch on this Device ';
+                      }
+                    },
+                    child: Text(no))
               ],
             ),
           ),
@@ -214,3 +177,16 @@ class RoundedPhone extends StatelessWidget {
     );
   }
 }
+
+
+// onPressed: () async {
+//                 const no = '+251940046254';
+//                 // in here tel is used to define it is phone number.
+//                 // canlaunch have differnt schema those http:$url  , tel:$url , sms:$url , mailto$url ,
+//                 const url = 'tel:$no';
+//                 if (await canLaunchUrl(Uri.parse(url))) {
+//                   await launchUrl(Uri.parse(url));
+//                 } else {
+//                   throw 'Could not Call on this Device';
+//                 }
+//               },

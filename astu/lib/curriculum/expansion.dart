@@ -14,6 +14,7 @@ class Roundedexpansion extends StatelessWidget {
       children: [
         SingleChildScrollView(
           child: Column(
+            
             children: [
               ExpansionTile(
                 title: Text("First Year:   Semister I"),
@@ -132,7 +133,7 @@ class Roundedexpansion extends StatelessWidget {
                 ],
               ),
               ExpansionTile(
-                title: Text("Second Year : First Semister"),
+                title: Text("Second Year : Semister I"),
                 children: [
                   SingleChildScrollView(
                     child: DataTable(
@@ -145,31 +146,37 @@ class Roundedexpansion extends StatelessWidget {
                       rows: [
                         DataRow(cells: [
                           DataCell(Text("1")),
-                          DataCell(Text("Applied Math III")),
+                          DataCell(Text("Applied Mathematics II")),
                           DataCell(Text("4")),
-                          DataCell(Text("Applied II"))
+                          DataCell(Text("Applied Mathematics I "))
                         ]),
                         DataRow(cells: [
                           DataCell(Text("2")),
-                          DataCell(Text("Electronics Circuit I")),
-                          DataCell(Text("4")),
+                          DataCell(Text("Engineering Drawing")),
+                          DataCell(Text("3")),
                           DataCell(Text("None"))
                         ]),
                         DataRow(cells: [
                           DataCell(Text("3")),
-                          DataCell(Text("Fundamental of Electrical")),
-                          DataCell(Text("4")),
-                          DataCell(Text("None"))
+                          DataCell(Text("Fundamental Programming ")),
+                          DataCell(Text("3")),
+                          DataCell(Text("Introduction To Computing"))
                         ]),
                         DataRow(cells: [
                           DataCell(Text("4")),
-                          DataCell(Text("Data Structure")),
+                          DataCell(Text("Intruduction to Computing")),
                           DataCell(Text("3")),
-                          DataCell(Text("CSE1102"))
+                          DataCell(Text("None"))
                         ]),
                         DataRow(cells: [
                           DataCell(Text("5")),
-                          DataCell(Text("Geography")),
+                          DataCell(Text("Logic and Critical Thinking ")),
+                          DataCell(Text("3")),
+                          DataCell(Text("None"))
+                        ]),
+                        DataRow(cells: [
+                          DataCell(Text("6")),
+                          DataCell(Text("Health and Physical Education")),
                           DataCell(Text("3")),
                           DataCell(Text("None"))
                         ]),
@@ -178,8 +185,8 @@ class Roundedexpansion extends StatelessWidget {
                   )
                 ],
               ),
-              ExpansionTile(
-                title: Text("Second Year : Second Semister"),
+                            ExpansionTile(
+                title: Text("Second Year : Semister II"),
                 children: [
                   SingleChildScrollView(
                     child: DataTable(
@@ -192,32 +199,38 @@ class Roundedexpansion extends StatelessWidget {
                       rows: [
                         DataRow(cells: [
                           DataCell(Text("1")),
-                          DataCell(Text("Object Oriented Pro")),
-                          DataCell(Text("3")),
-                          DataCell(Text("None"))
+                          DataCell(Text("Applied Mathematics II")),
+                          DataCell(Text("4")),
+                          DataCell(Text("Applied Mathematics I "))
                         ]),
                         DataRow(cells: [
                           DataCell(Text("2")),
-                          DataCell(Text("Discreate Mathematics")),
+                          DataCell(Text("Engineering Drawing")),
                           DataCell(Text("3")),
                           DataCell(Text("None"))
                         ]),
                         DataRow(cells: [
                           DataCell(Text("3")),
-                          DataCell(Text("Elective")),
-                          DataCell(Text("0")),
-                          DataCell(Text("None"))
+                          DataCell(Text("Fundamental Programming ")),
+                          DataCell(Text("3")),
+                          DataCell(Text("Introduction To Computing"))
                         ]),
                         DataRow(cells: [
                           DataCell(Text("4")),
-                          DataCell(Text("Digital Logic Design ")),
-                          DataCell(Text("4")),
-                          DataCell(Text("Electronics Cicruit"))
+                          DataCell(Text("Intruduction to Computing")),
+                          DataCell(Text("3")),
+                          DataCell(Text("None"))
                         ]),
                         DataRow(cells: [
                           DataCell(Text("5")),
-                          DataCell(Text("DataBase")),
-                          DataCell(Text("4")),
+                          DataCell(Text("Logic and Critical Thinking ")),
+                          DataCell(Text("3")),
+                          DataCell(Text("None"))
+                        ]),
+                        DataRow(cells: [
+                          DataCell(Text("6")),
+                          DataCell(Text("Health and Physical Education")),
+                          DataCell(Text("3")),
                           DataCell(Text("None"))
                         ]),
                       ],
@@ -225,8 +238,9 @@ class Roundedexpansion extends StatelessWidget {
                   )
                 ],
               ),
-              ExpansionTile(
-                title: Text("Third Year:  First Semister"),
+              
+                            ExpansionTile(
+                title: Text("Third Year : Semister I"),
                 children: [
                   SingleChildScrollView(
                     child: DataTable(
@@ -239,25 +253,37 @@ class Roundedexpansion extends StatelessWidget {
                       rows: [
                         DataRow(cells: [
                           DataCell(Text("1")),
-                          DataCell(Text("Algorithm")),
-                          DataCell(Text("3")),
-                          DataCell(Text("Data Structure"))
+                          DataCell(Text("Applied Mathematics II")),
+                          DataCell(Text("4")),
+                          DataCell(Text("Applied Mathematics I "))
                         ]),
                         DataRow(cells: [
                           DataCell(Text("2")),
-                          DataCell(Text("Probablity & Random process")),
+                          DataCell(Text("Engineering Drawing")),
                           DataCell(Text("3")),
-                          DataCell(Text("Discreat Math"))
+                          DataCell(Text("None"))
                         ]),
                         DataRow(cells: [
                           DataCell(Text("3")),
-                          DataCell(Text("Computer Architecture")),
+                          DataCell(Text("Fundamental Programming ")),
                           DataCell(Text("3")),
-                          DataCell(Text("DLD"))
+                          DataCell(Text("Introduction To Computing"))
                         ]),
                         DataRow(cells: [
                           DataCell(Text("4")),
-                          DataCell(Text("Free Elective")),
+                          DataCell(Text("Intruduction to Computing")),
+                          DataCell(Text("3")),
+                          DataCell(Text("None"))
+                        ]),
+                        DataRow(cells: [
+                          DataCell(Text("5")),
+                          DataCell(Text("Logic and Critical Thinking ")),
+                          DataCell(Text("3")),
+                          DataCell(Text("None"))
+                        ]),
+                        DataRow(cells: [
+                          DataCell(Text("6")),
+                          DataCell(Text("Health and Physical Education")),
                           DataCell(Text("3")),
                           DataCell(Text("None"))
                         ]),
@@ -267,7 +293,7 @@ class Roundedexpansion extends StatelessWidget {
                 ],
               ),
               ExpansionTile(
-                title: Text("First Year"),
+                title: Text("Third Year: Semister II"),
                 children: [
                   SingleChildScrollView(
                     child: DataTable(
@@ -324,7 +350,245 @@ class Roundedexpansion extends StatelessWidget {
                     ),
                   )
                 ],
-              )
+              ),
+              ExpansionTile(
+                title: Text("Fourth Year: Semister I"),
+                children: [
+                  SingleChildScrollView(
+                    child: DataTable(
+                      columns: [
+                        DataColumn(label: Text("No")),
+                        DataColumn(label: Text("Course Name")),
+                        DataColumn(label: Text("Cr-Hr")),
+                        DataColumn(label: Text("Pre-req")),
+                      ],
+                      rows: [
+                        DataRow(cells: [
+                          DataCell(Text("1")),
+                          DataCell(Text("Applied Mathematics I")),
+                          DataCell(Text("4")),
+                          DataCell(Text("None"))
+                        ]),
+                        DataRow(cells: [
+                          DataCell(Text("2")),
+                          DataCell(Text("General Physics I")),
+                          DataCell(Text("4")),
+                          DataCell(Text("None"))
+                        ]),
+                        DataRow(cells: [
+                          DataCell(Text("3")),
+                          DataCell(Text("General Chemistry I")),
+                          DataCell(Text("4")),
+                          DataCell(Text("None"))
+                        ]),
+                        DataRow(cells: [
+                          DataCell(Text("4")),
+                          DataCell(Text("Intruduction to Computing")),
+                          DataCell(Text("3")),
+                          DataCell(Text("None"))
+                        ]),
+                        DataRow(cells: [
+                          DataCell(Text("5")),
+                          DataCell(Text("Communication English Skill")),
+                          DataCell(Text("3")),
+                          DataCell(Text("None"))
+                        ]),
+                        DataRow(cells: [
+                          DataCell(Text("6")),
+                          DataCell(Text("Introduction to Civics and Ethics")),
+                          DataCell(Text("3")),
+                          DataCell(Text("None"))
+                        ]),
+                        DataRow(cells: [
+                          DataCell(Text("7")),
+                          DataCell(Text("Health and Physical")),
+                          DataCell(Text("0")),
+                          DataCell(Text("None"))
+                        ]),
+                      ],
+                    ),
+                  )
+                ],
+              ),
+              ExpansionTile(
+                title: Text("Fourth Year: Semister II"),
+                children: [
+                  SingleChildScrollView(
+                    child: DataTable(
+                      columns: [
+                        DataColumn(label: Text("No")),
+                        DataColumn(label: Text("Course Name")),
+                        DataColumn(label: Text("Cr-Hr")),
+                        DataColumn(label: Text("Pre-req")),
+                      ],
+                      rows: [
+                        DataRow(cells: [
+                          DataCell(Text("1")),
+                          DataCell(Text("Applied Mathematics I")),
+                          DataCell(Text("4")),
+                          DataCell(Text("None"))
+                        ]),
+                        DataRow(cells: [
+                          DataCell(Text("2")),
+                          DataCell(Text("General Physics I")),
+                          DataCell(Text("4")),
+                          DataCell(Text("None"))
+                        ]),
+                        DataRow(cells: [
+                          DataCell(Text("3")),
+                          DataCell(Text("General Chemistry I")),
+                          DataCell(Text("4")),
+                          DataCell(Text("None"))
+                        ]),
+                        DataRow(cells: [
+                          DataCell(Text("4")),
+                          DataCell(Text("Intruduction to Computing")),
+                          DataCell(Text("3")),
+                          DataCell(Text("None"))
+                        ]),
+                        DataRow(cells: [
+                          DataCell(Text("5")),
+                          DataCell(Text("Communication English Skill")),
+                          DataCell(Text("3")),
+                          DataCell(Text("None"))
+                        ]),
+                        DataRow(cells: [
+                          DataCell(Text("6")),
+                          DataCell(Text("Introduction to Civics and Ethics")),
+                          DataCell(Text("3")),
+                          DataCell(Text("None"))
+                        ]),
+                        DataRow(cells: [
+                          DataCell(Text("7")),
+                          DataCell(Text("Health and Physical")),
+                          DataCell(Text("0")),
+                          DataCell(Text("None"))
+                        ]),
+                      ],
+                    ),
+                  )
+                ],
+              ),
+              ExpansionTile(
+                title: Text("Fifth Year: Semister I"),
+                children: [
+                  SingleChildScrollView(
+                    child: DataTable(
+                      columns: [
+                        DataColumn(label: Text("No")),
+                        DataColumn(label: Text("Course Name")),
+                        DataColumn(label: Text("Cr-Hr")),
+                        DataColumn(label: Text("Pre-req")),
+                      ],
+                      rows: [
+                        DataRow(cells: [
+                          DataCell(Text("1")),
+                          DataCell(Text("Applied Mathematics I")),
+                          DataCell(Text("4")),
+                          DataCell(Text("None"))
+                        ]),
+                        DataRow(cells: [
+                          DataCell(Text("2")),
+                          DataCell(Text("General Physics I")),
+                          DataCell(Text("4")),
+                          DataCell(Text("None"))
+                        ]),
+                        DataRow(cells: [
+                          DataCell(Text("3")),
+                          DataCell(Text("General Chemistry I")),
+                          DataCell(Text("4")),
+                          DataCell(Text("None"))
+                        ]),
+                        DataRow(cells: [
+                          DataCell(Text("4")),
+                          DataCell(Text("Intruduction to Computing")),
+                          DataCell(Text("3")),
+                          DataCell(Text("None"))
+                        ]),
+                        DataRow(cells: [
+                          DataCell(Text("5")),
+                          DataCell(Text("Communication English Skill")),
+                          DataCell(Text("3")),
+                          DataCell(Text("None"))
+                        ]),
+                        DataRow(cells: [
+                          DataCell(Text("6")),
+                          DataCell(Text("Introduction to Civics and Ethics")),
+                          DataCell(Text("3")),
+                          DataCell(Text("None"))
+                        ]),
+                        DataRow(cells: [
+                          DataCell(Text("7")),
+                          DataCell(Text("Health and Physical")),
+                          DataCell(Text("0")),
+                          DataCell(Text("None"))
+                        ]),
+                      ],
+                    ),
+                  )
+                ],
+              ),
+              ExpansionTile(
+                title: Text("Fifth Year : Semister II"),
+                children: [
+                  SingleChildScrollView(
+                    child: DataTable(
+                      columns: [
+                        DataColumn(label: Text("No")),
+                        DataColumn(label: Text("Course Name")),
+                        DataColumn(label: Text("Cr-Hr")),
+                        DataColumn(label: Text("Pre-req")),
+                      ],
+                      rows: [
+                        DataRow(cells: [
+                          DataCell(Text("1")),
+                          DataCell(Text("Applied Mathematics I")),
+                          DataCell(Text("4")),
+                          DataCell(Text("None"))
+                        ]),
+                        DataRow(cells: [
+                          DataCell(Text("2")),
+                          DataCell(Text("General Physics I")),
+                          DataCell(Text("4")),
+                          DataCell(Text("None"))
+                        ]),
+                        DataRow(cells: [
+                          DataCell(Text("3")),
+                          DataCell(Text("General Chemistry I")),
+                          DataCell(Text("4")),
+                          DataCell(Text("None"))
+                        ]),
+                        DataRow(cells: [
+                          DataCell(Text("4")),
+                          DataCell(Text("Intruduction to Computing")),
+                          DataCell(Text("3")),
+                          DataCell(Text("None"))
+                        ]),
+                        DataRow(cells: [
+                          DataCell(Text("5")),
+                          DataCell(Text("Communication English Skill")),
+                          DataCell(Text("3")),
+                          DataCell(Text("None"))
+                        ]),
+                        DataRow(cells: [
+                          DataCell(Text("6")),
+                          DataCell(Text("Introduction to Civics and Ethics")),
+                          DataCell(Text("3")),
+                          DataCell(Text("None"))
+                        ]),
+                        DataRow(cells: [
+                          DataCell(Text("7")),
+                          DataCell(Text("Health and Physical")),
+                          DataCell(Text("0")),
+                          DataCell(Text("None"))
+                        ]),
+                      ],
+                    ),
+                  )
+                ],
+              ),
+              
+              
             ],
           ),
         )
